@@ -1,5 +1,5 @@
 body{
-	background: #2c3135;
+	background: #fefefe;
 	color: #319FB7;
 	font-weight: 400;
 	font-size: 1em;
@@ -110,14 +110,6 @@ body{
 	font-weight:normal;
 	opacity:0.8;
 }
- 
-#btn_down{
-	
-		position:relative;
-		width:120px;
-		top:90%;
-		margin:auto;
-}
 
 #btn_back{
 	
@@ -128,6 +120,11 @@ body{
 		left:10px;
 		background:red;
 		cursor:pointer;
+}
+
+#first-section{
+  width: 100%;
+  height: 100vh;
 }
 
 button.content-switch{
@@ -148,7 +145,17 @@ button.content-switch{
 	position:relative;
 	width:100%;
 	height:105%;
-} 
+}
+
+.apartamento-dual{
+  width: 277px;
+  height: 262px;
+  background-image: url(../images/apart2-dual.png);
+}
+
+.apartamento-dual.move-right{
+  background-position: -277px;
+}
   
 @-moz-keyframes buttonAnim
 {
@@ -208,17 +215,6 @@ button.content-switch{
 
 	width:auto;
 	height:100%;
-}
-
-#torresApart1{
-
-	position:absolute;
-	width:22.15333%;
-	right:0px;
-	height:100%;
-	text-align:left;
-	vertical-align:middle;
-
 }
 
 #torresApart1Container{
@@ -815,8 +811,7 @@ button.content-switch{
   padding-right: 15px;
   padding-left: 15px;
   overflow-x: visible;
-  
-  -webkit-overflow-scrolling: touch;
+
   border-top: 1px solid transparent;
   /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
