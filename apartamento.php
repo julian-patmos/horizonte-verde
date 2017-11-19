@@ -20,113 +20,164 @@
 
 <body>
 		<div id="first-section">
-			
-			<div class="codrops-top">
-				<a id="btn_home" href="index.html">
-					<b>Ir al inicio</b>
-				</a>
-				<button class="content-switch" data-target-spy="#second-section" data-timelaps="2500">Ver detalle</button>
-			</div>
-
-
-
-			<div id="bgApt"></div>
-
-			<div id="main">
-
-				<div id="part1">Tipos de Apartamentos Horizonte Verde </div>
-
-				<div id="part2">3 ALCOBAS ESQUINERO + VESTIER + CLOSET DE LINOS + BALCÓN</div>
-				<div id="part3">VISTA A LA CORDILLERA</div>
+			<div class="info-apartment">
+				<p class="titlehome">IR AL INICIO</p>
+				<div class="text-info-container">
+					<p class="title-small">TIPOS DE APARTAMENTOS HORIZONTE VERDER</p>
+					<h1>3 ALCOBAS ESQUINERO + VESTIER + CLOSET DE LINOS + BALCÓN</h1>
+					<h2>VISTA A LA CORDILLERA</h2>
+				</div>
+				<div class="capsule-button">
+					<button class="button button-seemore content-switch" data-target-spy="#second-section" data-timelaps="1500">VER DETALLE</button>
+				</div>
 			</div>
 		</div>
-		<div class="content" id="second-section">
-			<header>
-				<nav class="navbar navbar-default" role="navigation">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav head-menu">
-							<input type="hidden" id="selected_menu_item" value="=$selectedMenuId; ?>" />
-							<li class="active specialFont">
-								<a style="color:#000;font-weight:bold;font-size:90%;" href="#1a" data-toggle="tab" id="welcome">
-									INFORMACI&Oacute;N
-								</a>
-							</li>
-							<li class="specialFont" style="color:black">
-								<a style="color:#000;font-weight:bold;font-size:90%;" href="#2a" data-toggle="tab" id="kitchen">INTERIORES</a>
-							</li>
-							<li class="specialFont" style="color:black">
-								<a style="color:#000;font-weight:bold;font-size:90%;" href="#3a" data-toggle="tab" id="programma"> PLANTAS AMBIENTADAS</a>
-							</li>
-							<li class="specialFont" style="color:black">
-								<button class="content-switch" data-target-spy="#first-section" data-timelaps="2500"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</header>
-			<section>
-				<div class="tab-content">
-					<div class="tab-pane active" id="1a">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="col-md-4">
-								<div class="fontTitles">
-									APARTAMENTO 3 ALCOBAS ESQUINERO+ VESTIER + CLOSET DE LINOS + BALC&Oacute;N
-								</div>
-								<ul>
-									<li>Alcoba principal con ba&ntilde;o y vestier.</li>
-									<li>2 alcobas auxiliares con closet.</li>
-									<li>Sala comedor con balc&oacute;n.</li>
-									<li>Espacio para closet de linos o punto de trabajo.</li>
-									<li>Cocina</li>
-									<li>Zona de ropas</li>
-									<li>1 ba&ntilde;o auxiliar</li>
-								</ul>
-
-								*&Aacute;rea total construida desde 77.03 mt2
-								<br>*&Aacute;rea privada construida desde 64.12 mt2
-								<br>
-								<div>
-									Nota: terraza en pisos 1,2,7,10 y 13
-								</div>
-								<img src="images/vistaCordilleraApart.jpg"/>
-							</div>
-							<div class="col-md-4">
-								<img class="img-responsive" src="images/apt1.png" />
-							</div>
-							<div class="col-md-4">
-								<div id="torresApart1Container">
-									<div id="id_backT"></div>
-									<div class="apartamento-dual"></div>
-									<div id="id_nextT"></div>
-								</div>
-								
-								<div>
-									<div class="available"></div>
-									<div id="list_apart1"><? echo $textType1_1;?> </div>
+		<div class="container" id="second-section">
+			<div class="row">
+				<header>
+					<div class="header-navigation">
+						<div class="wrap">
+							<div class="capsule-button">
+								<a href="http://localhost/hv/"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a>
+								<button class="button btn-go-back content-switch" data-target-spy="#first-section" data-timelaps="1500">VOLVER</button>
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
 								</div>
 							</div>
 						</div>
 					</div>
+					 <nav class="wrap">
+					    <div class="collapse navbar-collapse" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a data-toggle="pill" href="#informacion-tab">INFORMACION</a></li>
+								<li><a data-toggle="pill" href="#interiores-tab">INTERIORES</a></li>
+								<li><a data-toggle="pill" href="#plantas-tab">PLANTAS AMBIENTADAS</a></li>
+							</ul>
+					    </div>
+					</nav> 
+				</header>
+				<section>
+					<div class="tab-content ">
+						<div class="tab-pane active" id="informacion-tab">
+							<div class="wrap row">
+								<div class="col-md-4">
+									<h3 class="info-text-green">APARTAMENTO 3 ALCOBAS ESQUINERO+ VESTIER + CLOSET DE LINOS + BALC&Oacute;N</h3>
+									<p class="texto-h4">
+										Alcoba principal con ba&ntilde;o y vestier.</br>
+										2 alcobas auxiliares con closet.</br>
+										Sala comedor con balc&oacute;n.</br>
+										Espacio para closet de linos o punto de trabajo.</br>
+										Cocina</br>
+										Zona de ropas</br>
+										1 ba&ntilde;o auxiliar</br>
+									</p>
 
-					<div class="tab-pane" id="2a">
+									<p>* Área total construida desde 77.03 mt2</p>
+									<p>* Área privada construida desde 64.12 mt2</p>
 
-						<div id="container2a">
+									<div class="info-text-green">
+										<h5>Nota: </h5>
+										<ul>
+											<li>terraza en pisos 1,2,7,10 y 13</li>
+											<li>Vestier y zona de ropas independientes</li>
+										</ul>
+									</div>
+									<div class="col-md-12" style="text-align: center; margin-top: 20px;">
+										<img src="images/vistaCordilleraApart.jpg"/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<img class="img-recorridos img-responsive" src="images/apt1.png" />
+								</div>
+								<div class="col-md-4">
+									<div id="torresApart1Container" class="torres-images">
+										<div id="id_backT"></div>
+										<div class="apartamento-dual"></div>
+										<div id="id_nextT"></div>
+									</div>
+									
+									<div>
+										<div class="available"></div>
+										<div id="list_apart1"><? echo $textType1_1;?> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="interiores-tab">
+
+							<div id="container2a">
 
 
-							<div id="divImgInteriores">
+								<div id="divImgInteriores">
 
 
 
-								<div id="myCarousel2" class="carousel slide" data-ride="carousel">
+									<div id="myCarousel2" class="carousel slide" data-ride="carousel">
+										<!-- Indicators -->
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel" data-slide-to="1"></li>
+											<li data-target="#myCarousel" data-slide-to="2"></li>
+										</ol>
+
+										<!-- Wrapper for slides -->
+										<div class="carousel-inner">
+											<div class="item active">
+												<img src="images/apartments/apart1/01.jpg">
+											</div>
+
+											<div class="item">
+												<img src="images/apartments/apart1/02.jpg">
+											</div>
+
+											<div class="item">
+												<img src="images/apartments/apart1/03.jpg">
+											</div>
+										</div>
+
+										<!-- Left and right controls -->
+									    <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+									      <span class="glyphicon glyphicon-chevron-left"></span>
+									      <span class="sr-only">Previous</span>
+									    </a>
+									    <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+									      <span class="glyphicon glyphicon-chevron-right"></span>
+									      <span class="sr-only">Next</span>
+									    </a>
+									</div>
+
+								</div>
+
+
+							</div>
+						</div>
+
+						<div class="tab-pane" id="plantas-tab" style="position:relative;width:100%;vertical-align:top;">
+
+							<center>
+
+								<div style="position:relative;top:-10px;font-size:60%;cursor:pointer;">
+
+									<div id="textTorre1" style="width:60px;font-weight:normal;position:relative;display:inline-block;font-size:80%;">TORRE 1</div> |
+									<div id="textTorre2" onmousedown="setTorre2()" style="width:60px;position:relative;display:inline-block;font-weight:normal;font-size:80%;">TORRE 2</div>
+
+								</div>
+
+							</center>
+
+							<div id="id_backP"></div>
+								<center>
+									<div id="titleImagePlant" style="position:relative;top:-5px;font-size:50%;font-weight:bold;">PISO 1</div>
+								</center>
+
+
+
+								<div id="myCarousel" class="carousel slide" data-ride="carousel">
 									<!-- Indicators -->
 									<ol class="carousel-indicators">
 										<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -150,85 +201,22 @@
 									</div>
 
 									<!-- Left and right controls -->
-								    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-								      <span class="glyphicon glyphicon-chevron-left"></span>
-								      <span class="sr-only">Previous</span>
-								    </a>
-								    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-								      <span class="glyphicon glyphicon-chevron-right"></span>
-								      <span class="sr-only">Next</span>
-								    </a>
+									<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="right carousel-control" href="#myCarousel" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right"></span>
+										<span class="sr-only">Next</span>
+									</a>
 								</div>
 
 							</div>
-
-
-						</div>
-					</div>
-
-					<div class="tab-pane" id="3a" style="position:relative;width:100%;vertical-align:top;">
-
-						<center>
-
-							<div style="position:relative;top:-10px;font-size:60%;cursor:pointer;">
-
-								<div id="textTorre1" style="width:60px;font-weight:normal;position:relative;display:inline-block;font-size:80%;">TORRE 1</div> |
-								<div id="textTorre2" onmousedown="setTorre2()" style="width:60px;position:relative;display:inline-block;font-weight:normal;font-size:80%;">TORRE 2</div>
-
-							</div>
-
-						</center>
-
-						<div id="id_backP"></div>
-
-						<div id="bg_imgPlantA" style="position:relative;height:900px;top:0px;display:inline-block;">
-							<center>
-								<div id="titleImagePlant" style="position:relative;top:-5px;font-size:50%;font-weight:bold;">PISO 1</div>
-							</center>
-
-
-
-							<div id="myCarousel" class="carousel slide" data-ride="carousel">
-								<!-- Indicators -->
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel" data-slide-to="1"></li>
-									<li data-target="#myCarousel" data-slide-to="2"></li>
-								</ol>
-
-								<!-- Wrapper for slides -->
-								<div class="carousel-inner">
-									<div class="item active">
-										<img src="images/apartments/apart1/01.jpg">
-									</div>
-
-									<div class="item">
-										<img src="images/apartments/apart1/02.jpg">
-									</div>
-
-									<div class="item">
-										<img src="images/apartments/apart1/03.jpg">
-									</div>
-								</div>
-
-								<!-- Left and right controls -->
-								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-								<a class="right carousel-control" href="#myCarousel" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right"></span>
-									<span class="sr-only">Next</span>
-								</a>
-							</div>
-
 						</div>
 
-						<div id="id_fwdP"></div>
 					</div>
-
-				</div>
-			</section>
+				</section>
+			</div>
 		</div>
 	</body>
 
