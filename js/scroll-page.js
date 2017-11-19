@@ -12,13 +12,18 @@ function iniciarScrollSpy() {
 	let imagenTorreApartamentoContainer = $("#torresApart1Container").find(".apartamento-dual");
 
 
+	document.getElementById("id_backT").addEventListener("click", () => {
+		imagenTorreApartamentoContainer.toggleClass("move-right")
+	});
+
 	document.getElementById("id_nextT").addEventListener("click", () => {
 		imagenTorreApartamentoContainer.toggleClass("move-right")
 	});
 
-	document.getElementById("id_backT").addEventListener("click", () => {
-		imagenTorreApartamentoContainer.toggleClass("moveRight")
-	});
+
+	function toggleButtonClass(){
+
+	}
 
 }
 

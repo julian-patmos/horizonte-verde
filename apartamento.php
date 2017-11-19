@@ -7,15 +7,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Apartamentos Horizonte Verde</title>
 
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
 
 
 	<script src="js/jquery-2.1.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/scroll-page.js"></script>
-	<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
 					</div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav nav-pills head-menu">
+						<ul class="nav navbar-nav head-menu">
 							<input type="hidden" id="selected_menu_item" value="=$selectedMenuId; ?>" />
 							<li class="active specialFont">
 								<a style="color:#000;font-weight:bold;font-size:90%;" href="#1a" data-toggle="tab" id="welcome">
@@ -103,33 +103,26 @@
 								<img class="img-responsive" src="images/apt1.png" />
 							</div>
 							<div class="col-md-4">
-								<div id="torresApart1">
-					
-									<div id="torresApart1Container">
-										<div id="id_backT"></div>
-										<div style="position:relative;display:inline-block;width:70%;height:100%;top:0px;text-align:center;">
-											<div id="titleT"><img id="tApart1" src="images/t1.jpg" width="100"/></div>
-											<div class="apartamento-dual"></div>
-										</div>
-										<div id="id_nextT"></div>
-									
-									</div>
-									
-									<div>
-										<div class="available"></div>
-										<div id="list_apart1"><? echo $textType1_1;?> </div>
-									</div>
+								<div id="torresApart1Container">
+									<div id="id_backT"></div>
+									<div class="apartamento-dual"></div>
+									<div id="id_nextT"></div>
+								</div>
+								
+								<div>
+									<div class="available"></div>
+									<div id="list_apart1"><? echo $textType1_1;?> </div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="tab-pane" id="2a" style="position:relative;width:100%;text-align:center;">
+					<div class="tab-pane" id="2a">
 
 						<div id="container2a">
 
 
-							<div id="divImgInteriores" style="position:relative;width:100%;height:100%; top:0px;left:0px;">
+							<div id="divImgInteriores">
 
 
 
@@ -157,14 +150,14 @@
 									</div>
 
 									<!-- Left and right controls -->
-									<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-										<span class="glyphicon glyphicon-chevron-left"></span>
-										<span class="sr-only">Previous</span>
-									</a>
-									<a class="right carousel-control" href="#myCarousel" data-slide="next">
-										<span class="glyphicon glyphicon-chevron-right"></span>
-										<span class="sr-only">Next</span>
-									</a>
+								    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+								      <span class="glyphicon glyphicon-chevron-left"></span>
+								      <span class="sr-only">Previous</span>
+								    </a>
+								    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+								      <span class="glyphicon glyphicon-chevron-right"></span>
+								      <span class="sr-only">Next</span>
+								    </a>
 								</div>
 
 							</div>
