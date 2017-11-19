@@ -20,10 +20,12 @@ function iniciarScrollSpy() {
 		imagenTorreApartamentoContainer.toggleClass("move-right")
 	});
 
+	let navPills = $(".nav-pills.nav-justified");
 
-	function toggleButtonClass(){
-
-	}
+	navPills.find("a").on("click", (e) => {
+		navPills.find(".active").removeClass("active");
+		$(e.currentTarget.parentNode).addClass("active");
+	});
 
 }
 

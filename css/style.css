@@ -152,6 +152,11 @@ body{
       width: 360px;
     }
 
+    .nav-slider-pisos{
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+
 #btn_back{
 	
 		position:relative;
