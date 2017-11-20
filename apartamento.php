@@ -21,7 +21,7 @@
 <body>
 		<div id="first-section">
 			<div class="info-apartment">
-				<p class="titlehome">IR AL INICIO</p>
+				<p class="titlehome"><a href="/index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a></p>
 				<div class="text-info-container">
 					<p class="title-small">TIPOS DE APARTAMENTOS HORIZONTE VERDER</p>
 					<h1>3 ALCOBAS ESQUINERO + VESTIER + CLOSET DE LINOS + BALCÓN</h1>
@@ -38,7 +38,7 @@
 					<div class="header-navigation">
 						<div class="wrap">
 							<div class="capsule-button">
-								<a href="http://localhost/hv/"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a>
+								<a href="/index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a>
 								<button class="button btn-go-back content-switch" data-target-spy="#first-section" data-timelaps="1500">VOLVER</button>
 								<div class="navbar-header">
 									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
