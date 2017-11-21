@@ -1,46 +1,10 @@
-<?php 
-include("conectdb.php");
-
-mysql_select_db("arvir49_producto",$dbconn);
-
-	$textType1_1=" ";
-	$textType1_2=" ";
-		
-	$apartType1=mysql_query("SELECT * FROM horizonte WHERE type=1");
-
-	while ($row=mysql_fetch_array($apartType1,MYSQL_ASSOC))
-	{
-		
-		$idApartText=strval($row['idApart']);
-		
-		if (($row['status']==0)&&($row['idTower']==1)){
-		
-			$textType1_1=$textType1_1." - ".$idApartText;
-			
-		}
-		
-		if (($row['status']==0)&&($row['idTower']==2)){
-		
-			$textType1_2=$textType1_2." - ".$idApartText;
-			
-		}
-	
-	}
-	
-	$textType1_1=$textType1_1." - ";
-	$textType1_2=$textType1_2." - ";
-	
-	
- ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, height=device-height">
 	<title>Apartamentos Horizonte Verde</title>
 
 	<!-- Latest compiled and minified CSS -->
@@ -60,8 +24,8 @@ mysql_select_db("arvir49_producto",$dbconn);
 				<p class="titlehome"><a href="index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a></p>
 				<div class="text-info-container">
 					<p class="title-small">TIPOS DE APARTAMENTOS HORIZONTE VERDE</p>
-					<h1>3 ALCOBAS ESQUINERO + VESTIER + CLOSET DE LINOS + BALCÓN</h1>
-					<h2>VISTA A LA CORDILLERA</h2>
+					<h2>3 ALCOBAS ESQUINERO + VESTIER + CLOSET DE LINOS + BALCÓN</h2>
+					<h3>VISTA A LA CORDILLERA</h3>
 				</div>
 				<div class="capsule-button">
 					<button class="button button-seemore content-switch" data-target-spy="#second-section" data-timelaps="1500">VER DETALLE</button>
@@ -138,7 +102,7 @@ mysql_select_db("arvir49_producto",$dbconn);
 									
 									<div style="text-align: center; margin-top: 20px;">
 										<div class="available"></div>
-										<div id="list_apart1" style="font-size:160%;"><? echo $textType1_1;?> </div>
+										<div id="list_apart1" style="font-size:160%;"></div>
 									</div>
 								</div>
 							</div>
@@ -156,9 +120,9 @@ mysql_select_db("arvir49_producto",$dbconn);
 									<div id="myCarousel2" class="carousel slide" data-ride="carousel">
 										<!-- Indicators -->
 										<ol class="carousel-indicators">
-											<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-											<li data-target="#myCarousel" data-slide-to="1"></li>
-											<li data-target="#myCarousel" data-slide-to="2"></li>
+											<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel2" data-slide-to="1"></li>
+											<li data-target="#myCarousel2" data-slide-to="2"></li>
 										</ol>
 
 										<!-- Wrapper for slides -->
@@ -208,7 +172,7 @@ mysql_select_db("arvir49_producto",$dbconn);
 								</ul>
 							</div>
 
-							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
 								<!-- Wrapper for slides -->
 								<div class="carousel-inner">
@@ -254,34 +218,7 @@ mysql_select_db("arvir49_producto",$dbconn);
 					</div>
 				</section>
 			</div>
-		</div>
-		
-				<?
-
-			echo '<script> 		
-			
-				function nextT(){
-					
-					//$("#id_nextT").hide();
-					//$("#id_backT").show();
-					$(".available").css("background","url(images/disponiblesT2.png)");
-					$(".available").css("background-size","100% 100%");
-					list_apart1.innerText="'.$textType1_2.'";
-					}
-		
-				function backT(){
-
-					//$("#id_nextT").show();
-					//$("#id_backT").hide();
-					$(".available").css("background","url(images/disponiblesT1.png)");
-					$(".available").css("background-size","100% 100%");
-					list_apart1.innerText="'.$textType1_1.'";
-					} 
-					
-</script>';		
-
-		?>	
-		
+		</div>		
 	</body>
 
 </html>

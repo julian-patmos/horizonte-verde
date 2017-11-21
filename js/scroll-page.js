@@ -27,6 +27,27 @@ function iniciarScrollSpy() {
 		$(e.currentTarget.parentNode).addClass("active");
 	});
 
+
+	let params = (new URL(document.location)).searchParams;
+	var request = $.ajax({
+		url: "controllers/get/getApartamentos.php",
+		method: "POST",
+		data: { id : params.get("id"), torre : params.get("torre") },
+		dataType: "json"
+	});
+
+	request.done(function( dataResponse ) {
+		let strApart = ""; 
+		for(i in dataResponse){
+			strApart += (dataResponse.length > 1 && i < (dataResponse.length-1)) ? dataResponse[i].idApart + " - " : dataResponse[i].idApart;
+		}
+		$("#list_apart1").text(strApart)
+	});
+	 
+	request.fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
+
 }
 
 
