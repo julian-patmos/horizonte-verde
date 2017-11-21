@@ -278,7 +278,10 @@ body{
   .info-apartment h2{
     font-size: 2em;
   }
-}
+
+  #plantas-tab{
+    margin-bottom: 20px;
+  }
 
 @media (min-width: 768px) {  }
 
