@@ -1,3 +1,39 @@
+<?php 
+include("conectdb.php");
+
+mysql_select_db("arvir49_producto",$dbconn);
+
+	$textType1_1=" ";
+	$textType1_2=" ";
+		
+	$apartType1=mysql_query("SELECT * FROM horizonte WHERE type=1");
+
+	while ($row=mysql_fetch_array($apartType1,MYSQL_ASSOC))
+	{
+		
+		$idApartText=strval($row['idApart']);
+		
+		if (($row['status']==0)&&($row['idTower']==1)){
+		
+			$textType1_1=$textType1_1." - ".$idApartText;
+			
+		}
+		
+		if (($row['status']==0)&&($row['idTower']==2)){
+		
+			$textType1_2=$textType1_2." - ".$idApartText;
+			
+		}
+	
+	}
+	
+	$textType1_1=$textType1_1." - ";
+	$textType1_2=$textType1_2." - ";
+	
+	
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +57,9 @@
 <body>
 		<div id="first-section">
 			<div class="info-apartment">
-				<p class="titlehome"><a href="/index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a></p>
+				<p class="titlehome"><a href="index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a></p>
 				<div class="text-info-container">
-					<p class="title-small">TIPOS DE APARTAMENTOS HORIZONTE VERDER</p>
+					<p class="title-small">TIPOS DE APARTAMENTOS HORIZONTE VERDE</p>
 					<h1>3 ALCOBAS ESQUINERO + VESTIER + CLOSET DE LINOS + BALCÓN</h1>
 					<h2>VISTA A LA CORDILLERA</h2>
 				</div>
@@ -38,7 +74,7 @@
 					<div class="header-navigation">
 						<div class="wrap">
 							<div class="capsule-button">
-								<a href="/index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a>
+								<a href="index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a>
 								<button class="button btn-go-back content-switch" data-target-spy="#first-section" data-timelaps="1500">VOLVER</button>
 								<div class="navbar-header">
 									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -53,7 +89,7 @@
 					 <nav class="wrap">
 					    <div class="collapse navbar-collapse" id="myNavbar">
 							<ul class="nav navbar-nav">
-								<li><a data-toggle="pill" href="#informacion-tab">INFORMACION</a></li>
+								<li><a data-toggle="pill" href="#informacion-tab">INFORMACI&Oacute;N</a></li> 
 								<li><a data-toggle="pill" href="#interiores-tab">INTERIORES</a></li>
 								<li><a data-toggle="pill" href="#plantas-tab">PLANTAS AMBIENTADAS</a></li>
 							</ul>
@@ -95,14 +131,14 @@
 								</div>
 								<div class="col-md-4">
 									<div id="torresApart1Container" class="torres-images">
-										<div id="id_backT"></div>
+										<div id="id_backT" onMouseDown="backT()"></div>
 										<div class="apartamento-dual"></div>
-										<div id="id_nextT"></div>
+										<div id="id_nextT" onMouseDown="nextT()"></div>
 									</div>
 									
-									<div>
+									<div style="text-align: center; margin-top: 20px;">
 										<div class="available"></div>
-										<div id="list_apart1"><? echo $textType1_1;?> </div>
+										<div id="list_apart1" style="font-size:160%;"><? echo $textType1_1;?> </div>
 									</div>
 								</div>
 							</div>
@@ -219,6 +255,33 @@
 				</section>
 			</div>
 		</div>
+		
+				<?
+
+			echo '<script> 		
+			
+				function nextT(){
+					
+					//$("#id_nextT").hide();
+					//$("#id_backT").show();
+					$(".available").css("background","url(images/disponiblesT2.png)");
+					$(".available").css("background-size","100% 100%");
+					list_apart1.innerText="'.$textType1_2.'";
+					}
+		
+				function backT(){
+
+					//$("#id_nextT").show();
+					//$("#id_backT").hide();
+					$(".available").css("background","url(images/disponiblesT1.png)");
+					$(".available").css("background-size","100% 100%");
+					list_apart1.innerText="'.$textType1_1.'";
+					} 
+					
+</script>';		
+
+		?>	
+		
 	</body>
 
 </html>
