@@ -185,6 +185,19 @@ body{
 .apartamento-dual.move-right{
   background-position: -197px;
 }
+
+.available{
+
+	position:relative;
+	width:180px;
+	height:52px;
+	background:url('../images/disponiblesT1.png');
+	background-size:100% 100%;
+	display:inline-block;
+	top:-4px;
+	margin:auto;
+}
+
   
 @-moz-keyframes buttonAnim
 {
