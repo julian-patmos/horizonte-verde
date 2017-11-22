@@ -1,11 +1,31 @@
 function iniciarScrollSpy() {
+	let firstContainerToHide = $("#first-section").find(".container-hide");
+	let secondContainerToHide = $("#second-section").find(".container-hide");
+
+
+	secondContainerToHide.hide()
 	document.querySelectorAll(".content-switch").forEach(ele =>{
 		ele.addEventListener("click", (e) =>{
 			let dataButton = e.currentTarget.dataset;
-			console.log("hola")
 			$('html, body').animate({
 	            scrollTop: $(dataButton.targetSpy).offset().top
-	        }, dataButton.timelaps);
+	        }, {
+	        	duration : dataButton.timelaps,
+	        	start: () => {
+	        		if(dataButton.targetSpy == "#second-section"){
+	        			secondContainerToHide.show();
+	        		}else{
+	        			firstContainerToHide.show()
+	        		}
+	        	},
+	        	complete: () =>{
+	        		if(dataButton.targetSpy == "#second-section"){
+	        			firstContainerToHide.hide()
+	        		}else{
+	        			secondContainerToHide.hide();
+	        		}
+	        	}
+	        });
 		});
 	});
 

@@ -13,14 +13,17 @@
 	<link rel="stylesheet" href="css/style.css">
 
 
-	<script src="js/jquery-2.1.3.min.js"></script>
+	<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/scroll-page.js"></script>
 </head>
 
 <body>
 		<div id="first-section">
-			<div class="info-apartment">
+			<div class="info-apartment container-hide">
 				<p class="titlehome"><a href="index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a></p>
 				<div class="text-info-container">
 					<p class="title-small">TIPOS DE APARTAMENTOS HORIZONTE VERDE</p>
@@ -33,7 +36,7 @@
 			</div>
 		</div>
 		<div class="container" id="second-section">
-			<div class="row">
+			<div class="row container-hide">
 				<header>
 					<div class="header-navigation">
 						<div class="wrap">
