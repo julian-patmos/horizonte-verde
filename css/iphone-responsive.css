@@ -77,7 +77,27 @@
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
-
+      .info-apartment{
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    
+      .titlehome{
+        width: 45%;
+        order: 2;
+      }
+    
+      .text-info-container{
+        flex: 0 0 100%;
+        height: 67%;
+        order: 1;
+      }
+    
+      .info-apartment .capsule-button{
+        width: 50%;
+        height: 150px;
+        order: 3;
+      }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
