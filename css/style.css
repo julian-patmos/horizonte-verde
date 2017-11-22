@@ -315,7 +315,7 @@ body{
 
 @media (min-width: 1200px) {  }
 
-@media screen and (max-height:400px) {
+@media screen and (max-height:450px) {
   .info-apartment{
     flex-direction: row;
     flex-wrap: wrap;
