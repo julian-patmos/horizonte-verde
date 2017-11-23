@@ -307,7 +307,7 @@ body{
 
   #plantas-tab{
     margin-bottom: 20px;
-  }
+  }}
 
 @media (min-width: 768px) {  }
 
@@ -315,30 +315,7 @@ body{
 
 @media (min-width: 1200px) {  }
 
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) 
-and (orientation : landscape) {
-    
-  .info-apartment{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
 
-  .titlehome{
-    width: 45%;
-    order: 2;
-  }
-
-  .text-info-container{
-    flex: 0 0 100%;
-    height: 67%;
-    order: 1;
-  }
-
-  .info-apartment .capsule-button{
-    width: 50%;
-    height: 150px;
-    order: 3;
-  }
+#second-section.hide-scroll{
+  height: 0px;
 }

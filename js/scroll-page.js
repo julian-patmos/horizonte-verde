@@ -1,9 +1,8 @@
 function iniciarScrollSpy() {
-	let firstContainerToHide = $("#first-section").find(".container-hide");
-	let secondContainerToHide = $("#second-section").find(".container-hide");
+	var firstContainer = $("#first-section");
+	var secondContainer = $("#second-section");
 
-
-	secondContainerToHide.hide()
+	$('html, body').animate({scrollTop: firstContainer.offset().top});
 	document.querySelectorAll(".content-switch").forEach(ele =>{
 		ele.addEventListener("click", (e) =>{
 			let dataButton = e.currentTarget.dataset;
@@ -12,18 +11,9 @@ function iniciarScrollSpy() {
 	        }, {
 	        	duration : dataButton.timelaps,
 	        	start: () => {
-	        		if(dataButton.targetSpy == "#second-section"){
-	        			secondContainerToHide.show();
-	        		}else{
-	        			firstContainerToHide.show()
-	        		}
-	        	},
-	        	complete: () =>{
-	        		if(dataButton.targetSpy == "#second-section"){
-	        			firstContainerToHide.hide()
-	        		}else{
-	        			secondContainerToHide.hide();
-	        		}
+	        		let eleTriggered = (e.currentTarget.targetSpy == "#second-section") ? $("#second-section") : $("#first-section") ;
+	        		$(e.currentTarget.dataset.targetSpy).removeClass("hide-scroll");
+	        		eleTriggered.addClass("hide-scroll");
 	        	}
 	        });
 		});

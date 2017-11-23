@@ -23,7 +23,7 @@
 
 <body>
 		<div id="first-section">
-			<div class="info-apartment container-hide">
+			<div class="info-apartment">
 				<p class="titlehome"><a href="index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a></p>
 				<div class="text-info-container">
 					<p class="title-small">TIPOS DE APARTAMENTOS HORIZONTE VERDE</p>
@@ -35,8 +35,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="container" id="second-section">
-			<div class="row container-hide">
+		<div class="container hide-scroll" id="second-section">
+			<div class="row">
 				<header>
 					<div class="header-navigation">
 						<div class="wrap">

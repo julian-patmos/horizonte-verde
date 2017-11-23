@@ -77,32 +77,35 @@
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
-      .info-apartment{
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-    
-      .titlehome{
-        width: 45%;
-        order: 2;
-      }
+    .info-apartment{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
-      .info-apartment .title-small {margin-bottom: 0;}
+    .titlehome{
+      width: 45%;
+      order: 2;
+    }
 
-      .info-apartment h2{font-size : 2em;}
-      .info-apartment h3{font-size: 1.7em;}
-    
-      .text-info-container{
-        flex: 0 0 100%;
-        height: 67%;
-        order: 1;
-      }
-    
-      .info-apartment .capsule-button{
-        width: 50%;
-        height: 150px;
-        order: 3;
-      }
+    .text-info-container{
+      flex: 0 0 100%;
+      height: 70%;
+      order: 1;
+    }
+
+    .text-info-container .title-small{
+      margin-bottom: 7%;
+    }
+
+    .text-info-container h2 {
+      font-size : 2em;
+    }
+
+    .info-apartment .capsule-button{
+      width: 50%;
+      height: 150px;
+      order: 3;
+    }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -125,11 +128,41 @@
 }
 
 /* Landscape */
+/* Landscape */
 @media only screen 
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
+    .info-apartment{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .titlehome{
+      width: 45%;
+      order: 2;
+    }
+
+    .text-info-container{
+      flex: 0 0 100%;
+      height: 70%;
+      order: 1;
+    }
+
+    .text-info-container .title-small{
+      margin-bottom: 7%;
+    }
+
+    .text-info-container h2 {
+      font-size : 2em;
+    }
+
+    .info-apartment .capsule-button{
+      width: 50%;
+      height: 150px;
+      order: 3;
+    }
 
 }
 
