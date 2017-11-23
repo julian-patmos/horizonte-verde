@@ -86,6 +86,11 @@
         width: 45%;
         order: 2;
       }
+
+      .info-apartment .title-small {margin-bottom: 0;}
+
+      .info-apartment h2{font-size : 2em;}
+      .info-apartment h3{font-size: 1.7em;}
     
       .text-info-container{
         flex: 0 0 100%;

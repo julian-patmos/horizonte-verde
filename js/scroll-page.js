@@ -65,7 +65,7 @@ function iniciarScrollSpy() {
 	});
 	 
 	request.fail(function( jqXHR, textStatus ) {
-	  alert( "Request failed: " + textStatus );
+	  console.log( "Request failed: " + textStatus );
 	});
 
 }
