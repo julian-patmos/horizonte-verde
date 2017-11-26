@@ -39,7 +39,7 @@ function iniciarScrollSpy() {
 
 
 	let params = (new URL(document.location)).searchParams;
-	var request = $.ajax({
+	/*var request = $.ajax({
 		url: "controllers/get/getApartamentos.php",
 		method: "POST",
 		data: { id : params.get("id"), torre : params.get("torre") },
@@ -56,7 +56,7 @@ function iniciarScrollSpy() {
 	 
 	request.fail(function( jqXHR, textStatus ) {
 	  console.log( "Request failed: " + textStatus );
-	});
+	});*/
 
 }
 

@@ -12,5 +12,11 @@ class ApartamentosModel extends Conexion
     {
         return $this->getObjects("SELECT * FROM horizonte WHERE type=$id AND idTower = $torre AND status = 0;");
     }
+
+    public function get_infoapart($type)
+    {
+    	$query = "SELECT * FROM info_apart WHERE type_fk = $type;";
+    	return $this->getObjects($query);
+    }
 }
   ?> 
