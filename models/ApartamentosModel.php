@@ -16,7 +16,7 @@ class ApartamentosModel extends Conexion
     public function get_infoapart($type)
     {
     	$query = "SELECT * FROM info_apart WHERE type_fk = $type;";
-    	return $this->getObjects($query);
+    	return $this->getOneObject($query);
     }
 }
   ?> 

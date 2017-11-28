@@ -23,7 +23,7 @@
 					<p class="titlehome"><a href="index.html"><i class="fa fa-home btn-go-home" aria-hidden="true"></i></a></p>
 					<div class="text-info-container">
 						<p class="title-small">TIPOS DE APARTAMENTOS HORIZONTE VERDE</p>
-						<h2>{{header.description}}</h2>
+						<h2>{{info.titulo}}</h2>
 						<h3>{{header.subtitle}}</h3>
 					</div>
 					<div class="capsule-button">
@@ -64,26 +64,13 @@
 							<div class="tab-pane active" id="informacion-tab">
 								<div class="wrap row">
 									<div class="col-md-4">
-										<h3 class="info-text-green">APARTAMENTO 3 ALCOBAS ESQUINERO+ VESTIER + CLOSET DE LINOS + BALC&Oacute;N</h3>
-										{{info}}
-										<p class="texto-h4">
-											Alcoba principal con ba&ntilde;o y vestier.</br>
-											2 alcobas auxiliares con closet.</br>
-											Sala comedor con balc&oacute;n.</br>
-											Espacio para closet de linos o punto de trabajo.</br>
-											Cocina</br>
-											Zona de ropas</br>
-											1 ba&ntilde;o auxiliar</br>
-										</p>
-
-										<p>* Área total construida desde 77.03 mt2</p>
-										<p>* Área privada construida desde 64.12 mt2</p>
+										<h3 class="info-text-green">{{info.titulo}}</h3>
+										<p class="texto-h4" v-html="info.infogeneral"></p>
 
 										<div class="info-text-green">
 											<h5>Nota: </h5>
 											<ul>
-												<li>terraza en pisos 1,2,7,10 y 13</li>
-												<li>Vestier y zona de ropas independientes</li>
+												<li>{{info.notas}}</li>
 											</ul>
 										</div>
 										<div class="col-md-12" style="text-align: center; margin-top: 20px;">
@@ -91,12 +78,12 @@
 										</div>
 									</div>
 									<div class="col-md-4">
-										<img class="img-recorridos img-responsive" src="images/apt1.png" />
+										<img class="img-recorridos img-responsive" :src="info.img_apart" />
 									</div>
 									<div class="col-md-4">
 										<div id="torresApart1Container" class="torres-images">
 											<div id="id_backT" onMouseDown="backT()"></div>
-											<div class="apartamento-dual"></div>
+											<div class="apartamento-dual" :style="{backgroundImage: `url(${info.imagenestorresarr})`}"></div>
 											<div id="id_nextT" onMouseDown="nextT()"></div>
 										</div>
 										
@@ -159,16 +146,8 @@
 
 							<div class="tab-pane" id="plantas-tab">
 								<div class="wrap nav-slider-pisos">
-									<ul class="nav nav-pills nav-justified">
-										<li class="active"><a data-target="#myCarousel" data-slide-to="0">PISO 1</a></li>
-										<li><a data-target="#myCarousel" data-slide-to="1">PISO 2</a></li>
-										<li><a data-target="#myCarousel" data-slide-to="2">PISOS 3, 4, 5 Y 6</a></li>
-										<li><a data-target="#myCarousel" data-slide-to="3">PISO 7</a></li>
-										<li><a data-target="#myCarousel" data-slide-to="4">PISOS 8, 9 Y 14</a></li>
-										<li><a data-target="#myCarousel" data-slide-to="5">PISO 10</a></li>
-										<li><a data-target="#myCarousel" data-slide-to="6">PISOS 11 Y 12</a></li>
-										<li><a data-target="#myCarousel" data-slide-to="7">PISO 13</a></li>
-										<li><a data-target="#myCarousel" data-slide-to="8">PISO 15</a></li>
+									<ul class="nav nav-pills nav-justified" v-for="(imagetitle, index) in info.imagenesslider">
+										<li><a data-target="#myCarousel" data-slide-to="{{index}}">{{imagetitle.titulo}}</a></li>
 									</ul>
 								</div>
 
@@ -176,40 +155,8 @@
 
 									<!-- Wrapper for slides -->
 									<div class="carousel-inner">
-										<div class="item active">
-											<img src="images/plantasambientadas/apart1/PISO1.png">
-										</div>
-
-										<div class="item">
-											<img src="images/plantasambientadas/apart1/PISO2.png">
-										</div>
-
-										<div class="item">
-											<img src="images/plantasambientadas/apart1/PISOS3_4_5_6.png">
-										</div>
-
-										<div class="item">
-											<img src="images/plantasambientadas/apart1/PISO7.png">
-										</div>
-
-										<div class="item">
-											<img src="images/plantasambientadas/apart1/PISOS8_9_14.png">
-										</div>
-
-										<div class="item">
-											<img src="images/plantasambientadas/apart1/PISO10.png">
-										</div>
-
-										<div class="item">
-											<img src="images/plantasambientadas/apart1/PISOS11_12.png">
-										</div>
-
-										<div class="item">
-											<img src="images/plantasambientadas/apart1/PISO13.png">
-										</div>
-
-										<div class="item">
-											<img src="images/plantasambientadas/apart1/PISO15.png">
+										<div class="item active" v-for="image in info.imagenesslider">
+											<img :src=`images/tipos/${image.url}`>
 										</div>
 									</div>
 								</div>

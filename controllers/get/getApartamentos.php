@@ -1,5 +1,5 @@
 <?php
-	require("../../models/ApartamentosModel.php");
+	require_once("../../models/ApartamentosModel.php");
 	$id = $_POST["id"];
 	$torre = $_POST["torre"];
 

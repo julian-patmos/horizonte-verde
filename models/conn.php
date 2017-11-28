@@ -18,7 +18,6 @@ class Conexion
         $this->_db->set_charset(DB_CHARSET);
     }
 
-
     public function getObjects($query){
         
         $result = $this->_db->query($query); 

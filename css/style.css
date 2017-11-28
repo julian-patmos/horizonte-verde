@@ -161,6 +161,10 @@ body{
       font-size: 1.4em;
     }
 
+    .texto-h4 p{
+      font-size: 0.8em;
+    }
+
     .img-recorridos{
       width: 360px;
     }

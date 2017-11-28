@@ -3,7 +3,7 @@
     define('DB_USER','root');
     define('DB_PASS','root');
     define('DB_NAME','horizonteverde');
-    define('DB_CHARSET','utf-8');
+    define('DB_CHARSET','utf8');
 
 /*
     define('DB_HOST','localhost');
