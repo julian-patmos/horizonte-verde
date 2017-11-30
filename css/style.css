@@ -55,11 +55,11 @@ body{
 
   .info-apartment .title-small{
     font-size: 1.3em;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
   }
 
   .info-apartment h2{
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .text-info-container{
@@ -200,7 +200,6 @@ body{
 .apartamento-dual{
   width: 197px;
   height: 250px;
-  background-image: url(../images/torres/apart1.png);
 }
 
 .apartamento-dual.move-right{
