@@ -4,15 +4,10 @@ body{
 	font-weight: 400;
 	font-size: 1.4em;
 	font-family: 'Lato', Arial, sans-serif;
-	overflow:hidden;
+  overflow:hidden;
 }
 
 /* Estilo de la imagen de fondo de cada apartamento, al 100% de toda la pagina. */
-
-.wrap{
-  width: 80%;
-  margin: 0 auto;
-}
 
 .button{
   border: 4px solid #fff;
@@ -95,21 +90,10 @@ body{
 #second-section{
   width: 100%;
   height: 100vh;
-  overflow: auto;
 }
+
   header{
     border-bottom: 3px solid #656565;
-  }
-
-  .navbar-header .navbar-toggle{
-    position: absolute;
-    right: 20px;
-    border: 2px solid #fefefe;
-    margin: 0;
-  }
-
-  .navbar-header .navbar-toggle .icon-bar{
-    background-color: #fefefe;
   }
 
   .header-navigation{
@@ -121,31 +105,6 @@ body{
   .header-navigation a{
     text-decoration: none;
     color: #fefefe;
-  }
-
-  .btn-go-home{
-    position: absolute;
-    left: 30px;
-    font-size: 2.5em;
-  }
-
-  .btn-go-back{
-    font-size: 1.5em;
-  }
-
-  nav.wrap{
-    padding: 20px 0;
-  }
-
-  .nav.navbar-nav{}
-
-  .nav.navbar-nav li a{
-    border: 4px solid #1d9387;
-    margin: 0 10px;
-    padding: 5px 20px;
-    color: #656565;
-    font-size: 1.3em;
-    font-weight: bold;
   }
 
   section{
