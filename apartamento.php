@@ -96,11 +96,9 @@
 							</v-tabs-content>
 
 							<v-tabs-content id="plantas-tab">
-								<d-block>
 									<v-carousel >
 										<v-carousel-item v-for="image in info.imagenesslider" :src=`images/tipos/${image.url}`></v-carousel-item>
 									</v-carousel>
-								</d-block>
 							</v-tabs-content>
 
 						</v-tabs-items>
