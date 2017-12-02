@@ -5,8 +5,15 @@ let data = {
 	}
 }
 
+
+Vue.use(VueMaterial.default);
+
 var app = new Vue({
 	el: '#app',
+	components: {
+		'carousel': VueCarousel.Carousel,
+		'slide': VueCarousel.Slide
+	},
 	data: {
 		apartamento: {},
 		info: {},
@@ -15,7 +22,7 @@ var app = new Vue({
 			subtitle : "VISTA A LA CORDILLERA"
 		},
 		showprimero : true,
-		showsegundo : false
+		showsegundo : false,
 	},
 	methods: {
 		changeView: function(){
