@@ -10,10 +10,6 @@ Vue.use(VueMaterial.default);
 
 var app = new Vue({
 	el: '#app',
-	components: {
-		'carousel': VueCarousel.Carousel,
-		'slide': VueCarousel.Slide
-	},
 	data: {
 		apartamento: {},
 		info: {},
@@ -23,6 +19,9 @@ var app = new Vue({
 		},
 		showprimero : true,
 		showsegundo : false,
+		slideinteriores : 0,
+		slideambientadas : 0,
+		puntoRecorridos: [],
 	},
 	methods: {
 		changeView: function(){
@@ -62,6 +61,8 @@ var app = new Vue({
 			.then(
 				data => {
 					this.info = data;
+					this.puntoRecorridos = JSON.parse(data.recorridos)
+					console.log(this.puntoRecorridos[0])
 					this.info.imagenesslider = JSON.parse(data.imagenesslider);
 				}
 			)

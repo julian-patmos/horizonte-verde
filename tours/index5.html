@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>360 Horizonte Verde</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+		
+			body {
+				background-color: #000000;
+				margin: 0px;
+				overflow: hidden;
+				
+			}
+			
+			#contenedor{
+				position:absolute;
+				width:500px;
+				height:500px;
+				left:0px;
+				top:0px;
+	
+			}
+			
+			#control{
+				position:absolute;
+				width:92px;
+				height:92px;
+				left:1%;
+				top:2%;
+			}
+			
+			#btnArriba{
+			
+				position:relative;
+				width:32px;
+				height:32px;
+				top:-100px;
+				left:30px;
+				background:url("img/btnArriba.png");
+				cursor:pointer;
+			
+			}
+			
+			#btnDerecha{
+			
+				position:relative;
+				width:32px;
+				height:32px;
+				top:-99px;
+				left:61px;
+				background:url("img/btnDerecha.png");
+				cursor:pointer;
+			
+			}
+			
+			#btnAbajo{
+			
+				position:relative;
+				width:32px;
+				height:32px;
+				top:-98px;
+				left:30px;
+				background:url("img/btnAbajo.png");
+				cursor:pointer;
+			
+			}
+			
+			#btnIzquierda{
+			
+				position:relative;
+				width:32px;
+				height:32px;
+				top:-162px;
+				left:-4px;
+				background:url("img/btnIzquierda.png");
+				cursor:pointer;
+			}
+			
+			#zona360{
+			
+				position:absolute;
+				left:0px;
+				top:0px;
+				background:rgba(0,0,0,0.0);
+			
+			}
+
+			
+			#btnInstrucciones{
+			
+				position:absolute;
+				width:155px;
+				height:36px;
+				right:1%;
+				top:2%;
+				cursor:pointer;
+			}
+			
+			#btnSound{
+			
+				position:absolute;
+				width:50px;
+				height:50px;
+				right:1%;
+				top:12%;
+				cursor:pointer;
+			}
+			
+			#info{
+			
+				position:absolute;
+				width:1093px;
+				height:538px;
+				left:15%;
+				top:6%;
+			}
+			
+			#btnCerrar{
+			
+				position:absolute;
+				width:50px;
+				height:50px;
+				right:1%;
+				top: 2%;
+				cursor:pointer;
+			}
+			
+			#infoClic{
+			
+				position:absolute;
+				width:239px;
+				height:93px;
+				left:49%;
+				top: 44%;
+				cursor:pointer;
+			}
+			
+			#infoInstrucciones{
+			
+				position:absolute;
+				width:240px;
+				height:78px;
+				right:60px;
+				top: -5px;
+				cursor:pointer;
+			}
+			
+			#infoBotones{
+			
+				position:absolute;
+				width:240px;
+				height:78px;
+				right:60px;
+				top: -5px;
+				cursor:pointer;
+			}
+			
+			#infoPuntos{
+			
+				position:absolute;
+				width:200px;
+				height:78px;
+				right:60px;
+				top: -5px;
+				cursor:pointer;
+			}
+			
+			#imgInfoPuntos{
+			
+				position:absolute;
+				width:200px;
+				height:auto;
+			}
+			
+			#start{
+			
+				position:absolute;
+				width:auto;
+				height:auto;
+				left:0px;
+				top: 0px;
+			}
+			
+			#load360{
+			
+				position:absolute;
+				width:auto;
+				height:auto;
+				left:0px;
+				top: 0px;
+			}
+			
+			#loadAll{
+			
+				position:absolute;
+				width:auto;
+				height:auto;
+				left:0px;
+				top: 0px;
+			}
+			
+			#textLoadAll{
+			
+				position:absolute;
+				width:auto;
+				height:auto;
+				left:50%;
+				top: 53%;
+				color:white;
+			
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+		
+		<div id="contenedor"></div>
+		<div id="zona360"><div id="control" style="visibility:hidden"><img src="img/control.png" /><div id="btnArriba"></div><div id="btnDerecha"></div><div id="btnAbajo"></div><div id="btnIzquierda"></div></div><div id="btnInstrucciones" style="visibility:hidden"><img width="155" height="36" src="img/cerrarTour.png"/></div><div id="btnSound" style="visibility:hidden"><img id="imgSound" src="img/btnSoundOn.png"/></div><div id="info" style="visibility:hidden"><img id="imgInfo" src="img/info00.png"/></div><div id="btnCerrar" style="visibility:hidden"><img src="img/btnCerrar.png"/></div><div id="start" title="Haz clic para ingresar" style="visibility:hidden" alt="Ingresar"><img id="startImage" src="img/start.jpg" /></div><div id="infoClic" style="visibility:hidden"><img id="imgClicAqui" src="img/infoClic.png"/></div><div id="infoInstrucciones" style="visibility:hidden"><img id="imgInfoInstrucciones" src="img/infoInstrucciones.png"/></div><div id="infoBotones" style="visibility:hidden"><img id="imgInfoBotones" src="img/habitacion.png"/></div><div id="infoPuntos" style="visibility:hidden"><img id="imgInfoPuntos" src="img/cocina.png"/></div><div id="cargando" style="visibility:hidden"><img id="load360Image" src="img/load360.png"/></div><div id="loadAll" style="visibility:hidden"><img id="loadAllImage" src="img/load360.png"/><div id="textLoadAll">0%</div></div></div>
+		<script src="three.js"></script>
+		<script src="detector.js"></script>
+		<script src="EventsControls.js"></script>
+		<script src="FullScreen.js"></script>		
+		<script src="threex.domevent.js"></script>
+		<audio id="sound" src="sound2.mp3" type="audio/mpeg" autoplay>
+		<script>
+
+			var camera, scene, renderer;
+			var imagen360,shot2,shot3,shot4,shot5,BackShot2,BackShot3,BackShot4,BackShot5,info01,info02,info03,info04,info05,info06,info07,info08,info09,info11,info12,info13,info14,shot2to3,shot3to4,shot3to5,shot3to2,shot5to3,shot4to5,shot5to4;
+			var isUserInteracting = false;
+			var objShot2 = [];
+			var objShot3 = [];
+			var objShot4 = [];
+			var objShot5 = [];
+			var objBackShot2 = [];
+			var objBackShot3 = [];
+			var objBackShot4 = [];
+			var objBackShot5 = [];
+			var objInfo01 = [];
+			var objInfo02 = [];
+			var objInfo03 = [];
+			var objInfo04 = [];
+			var objInfo05 = [];
+			var objInfo06 = [];
+			var objInfo07 = [];
+			var objInfo08 = [];
+			var objInfo09 = [];
+			var objInfo11 = [];
+			var objInfo12 = [];
+			var objInfo13 = [];
+			var objInfo14 = [];
+			var objShot2to3 = [];
+			var objShot3to4 = [];
+			var objShot3to5 = [];
+			var objShot3to2 = [];
+			var objShot4to5 = [];
+			var objShot5to4 = [];
+			var objShot5to3 = [];
+			var material360,materialAvance,materialShot2,materialShot4,materialShot5,materialBackShot2,materialBackShot3,materialBackShot4,materialBackShot5;
+			onMouseDownMouseX = 0, onMouseDownMouseY = 0,
+			lon = 90, onMouseDownLon = 0,
+			lat = 0, onMouseDownLat = 0,
+			phi = 0, theta = 0;
+			
+			init();
+			animate();
+			putInfoShot1();
+			
+			var projector = new THREE.Projector();
+			var projectorOver;
+			var state360=false;
+			var stateInfo=false;
+			var stateSound=0;
+			var stateStart=1;
+			var zona01Text,zona02Text,zona03Text,zona04Text,zona05Text,info12Text,info14Text;
+			var a=0;
+			
+			function init() {
+
+				var container;
+				
+				raycaster = new THREE.Raycaster();
+				mouse = new THREE.Vector2();
+
+				container=document.createElement("div");
+				document.getElementById("contenedor").appendChild(container);
+				
+				camera = new THREE.PerspectiveCamera( 95, (window.innerWidth)/ (window.innerHeight) , 1, 1100 );
+				camera.target = new THREE.Vector3( 0, 0, 0 );
+				scene = new THREE.Scene();
+				
+				var geometry = new THREE.SphereGeometry( 500, 60, 40 );
+
+				material360 = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/08.jpg' )
+				} );
+
+				imagen360 = new THREE.Mesh( geometry, material360 );
+				
+				imagen360.scale.x=-1;
+				imagen360.scale.y=1;
+				imagen360.scale.z=1;
+				
+				var btnAvance = new THREE.PlaneGeometry( 65, 92 );
+				var btnInfo = new THREE.PlaneGeometry( 64, 64 );
+				var textFrame = new THREE.PlaneGeometry( 239, 93 );
+				var textInfoFrame = new THREE.PlaneGeometry( 168, 96 );
+				var textInfoFrame2 = new THREE.PlaneGeometry( 222, 127);
+				//btnAvance.scale( 0.4, 0.4, 0.4 );
+				//btnAvance.rotateY(  Math.PI / 2.2 );
+
+				materialAvance = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/btnAvance.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/btnInfo.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				
+				shot2 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				info01 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				materialText2Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/zona02.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo01Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/habitacion.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo02Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/info02.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo03Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/info03.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo06Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/info06.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo08Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/info08.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo09Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/info09.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfoShowFrame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/infoShowImage.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo12Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/info12.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo13Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/info13.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				materialInfo14Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/info14.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				zona02Text = new THREE.Mesh( textFrame, materialText2Frame );
+				
+				zona02Text.position.x=-200;
+				zona02Text.position.z=-330;
+				
+				zona02Text.rotateY(Math.PI/6);
+				
+				info01Text = new THREE.Mesh( textInfoFrame, materialInfo01Frame );
+				
+				info01Text.position.x=0;
+				info01Text.position.z=0;
+				
+				info01Text.rotation.y=4.8;
+				
+				info02Text = new THREE.Mesh( textInfoFrame, materialInfo02Frame );
+				
+				info02Text.position.x=0;
+				info02Text.position.z=0;
+				
+				info02Text.rotation.y=5.8;
+				
+				info03Text = new THREE.Mesh( textInfoFrame2, materialInfo03Frame );
+				
+				info03Text.position.x=0;
+				info03Text.position.z=0;
+				
+				info03Text.rotation.y=0.4;
+				
+				info06Text = new THREE.Mesh( textInfoFrame2, materialInfo06Frame );
+				
+				info06Text.position.x=0;
+				info06Text.position.z=0;
+				
+				info06Text.rotation.y=1.5;
+				
+				info08Text = new THREE.Mesh( textInfoFrame, materialInfo08Frame );
+				
+				info08Text.position.x=0;
+				info08Text.position.z=0;
+				
+				info08Text.rotation.y=3.2;
+				
+				info09Text = new THREE.Mesh( textInfoFrame, materialInfo09Frame );
+				
+				info09Text.position.x=0;
+				info09Text.position.z=0;
+				
+				info09Text.rotation.y=4.2;
+				
+				infoShowText = new THREE.Mesh( textInfoFrame, materialInfoShowFrame );
+				
+				infoShowText.position.x=-150;
+				infoShowText.position.z=-100;
+				
+				infoShowText.rotation.y=3.8;
+				
+				info12Text = new THREE.Mesh( textInfoFrame, materialInfo12Frame );
+				
+				info12Text.position.x=-150;
+				info12Text.position.z=-100;
+				
+				info12Text.rotation.y=3.4;
+				
+				info13Text = new THREE.Mesh( textInfoFrame, materialInfo13Frame );
+				
+				info13Text.position.x=-150;
+				info13Text.position.z=-100;
+				info13Text.rotation.y=3.3;
+				
+				info14Text = new THREE.Mesh( textInfoFrame, materialInfo14Frame );
+				
+				info14Text.position.x=-150;
+				info14Text.position.z=-100;
+				info14Text.rotation.y=3.3;
+				
+				shot2.scale.x=0.4;
+				shot2.scale.y=0.4;
+				shot2.scale.z=0.4;
+		
+				shot2.position.x=100;
+				shot2.position.z=-300;
+				shot2.position.y=0;
+				
+				shot2.rotateY(Math.PI/1.1);
+				
+				info01.scale.x=0.4;
+				info01.scale.y=0.4;
+				info01.scale.z=0.4;
+				
+				info02 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info02.scale.x=0.4;
+				info02.scale.y=0.4;
+				info02.scale.z=0.4;
+				
+				info03 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info03.scale.x=0.4;
+				info03.scale.y=0.4;
+				info03.scale.z=0.4;	
+				
+				info04 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info04.scale.x=0.4;
+				info04.scale.y=0.4;
+				info04.scale.z=0.4;
+				
+				info05 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info05.scale.x=0.4;
+				info05.scale.y=0.4;
+				info05.scale.z=0.4;
+				
+				info06 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info06.scale.x=0.4;
+				info06.scale.y=0.4;
+				info06.scale.z=0.4;
+				
+				info07 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info07.scale.x=0.4;
+				info07.scale.y=0.4;
+				info07.scale.z=0.4;
+				
+				info08 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info08.scale.x=0.4;
+				info08.scale.y=0.4;
+				info08.scale.z=0.4;
+				
+				info09 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info09.scale.x=0.4;
+				info09.scale.y=0.4;
+				info09.scale.z=0.4;
+				
+				info11 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info11.scale.x=0.4;
+				info11.scale.y=0.4;
+				info11.scale.z=0.4;
+				
+				info12 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info12.scale.x=0.4;
+				info12.scale.y=0.4;
+				info12.scale.z=0.4;
+				
+				info13 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info13.scale.x=0.4;
+				info13.scale.y=0.4;
+				info13.scale.z=0.4;
+				
+				info14 = new THREE.Mesh( btnInfo, materialInfo );
+				
+				info14.scale.x=0.4;
+				info14.scale.y=0.4;
+				info14.scale.z=0.4;
+				
+				shot3 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				materialText3Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/zona03.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				zona03Text = new THREE.Mesh( textFrame, materialText3Frame );
+				
+				zona03Text.position.x=-200;
+				zona03Text.position.z=-50;
+				zona03Text.rotation.y=0.5;
+				
+				shot3.scale.x=0.4;
+				shot3.scale.y=0.4;
+				shot3.scale.z=0.4;
+				shot3.position.x=-450;
+				shot3.position.z=-32;
+				shot3.position.y=22;
+				
+				shot3.rotateY(Math.PI/2.2);
+				
+				shot4 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				materialText4Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/zona04.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				zona04Text = new THREE.Mesh( textFrame, materialText4Frame );
+				
+				zona04Text.position.x=-410;
+				zona04Text.position.z=55;
+				
+				zona04Text.rotateY(Math.PI/1.8);
+				
+				shot4.scale.x=0.4;
+				shot4.scale.y=0.4;
+				shot4.scale.z=0.4;
+				shot4.position.x=-400;
+				shot4.position.z=190;
+				shot4.position.y=14;
+				
+				shot4.rotateY(Math.PI/1.5);
+				
+				shot5 = new THREE.Mesh( btnAvance, materialAvance);
+				
+				materialText5Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/zona05.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				zona05Text = new THREE.Mesh( textFrame, materialText5Frame );
+				
+				zona05Text.position.x=-400;
+				zona05Text.position.z=155;
+				
+				zona05Text.rotateY(Math.PI/1.6);
+				
+				shot5.scale.x=0.4;
+				shot5.scale.y=0.4;
+				shot5.scale.z=0.4;
+				shot5.position.x=-310;
+				shot5.position.z=240;
+				
+				shot5.rotateY(Math.PI/1.2);
+				
+				materialText1Frame = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/zona01.png' ), transparent: true, color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				zona01Text = new THREE.Mesh( textFrame, materialText1Frame );
+				
+				zona01Text.position.x=-242;
+				zona01Text.position.z=-390;
+				
+				zona01Text.rotateY(Math.PI/5);
+				
+				BackShot2 = new THREE.Mesh( btnAvance, materialAvance );
+				BackShot2.scale.x=0.4;
+				BackShot2.scale.y=0.4;
+				BackShot2.scale.z=0.4;
+				BackShot2.position.x=-215;
+				BackShot2.position.z=-350;
+				BackShot2.position.y=1000;
+		
+				BackShot3 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				BackShot3.scale.x=0.4;
+				BackShot3.scale.y=0.4;
+				BackShot3.scale.z=0.4;
+				BackShot3.position.x=300;
+				BackShot3.position.z=-350;
+				BackShot3.position.y=1000;
+				BackShot3.rotateY(Math.PI / 1.2);
+		
+				BackShot4 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				BackShot4.scale.x=0.4;
+				BackShot4.scale.y=0.4;
+				BackShot4.scale.z=0.4;
+				BackShot4.position.x=30;
+				BackShot4.position.z=-450;
+				BackShot4.position.y=1000;
+				BackShot4.rotateY(Math.PI / 8);
+			
+				BackShot5 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				BackShot5.scale.x=0.4;
+				BackShot5.scale.y=0.4;
+				BackShot5.scale.z=0.4;
+				BackShot5.position.x=350;
+				BackShot5.position.z=-250;
+				BackShot5.position.y=1000;
+				BackShot5.rotateY(Math.PI / 1.7);
+				
+				shot2to3 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				shot2to3.scale.x=0.4;
+				shot2to3.scale.y=0.4;
+				shot2to3.scale.z=0.4;
+				shot2to3.position.x=100;
+				shot2to3.position.z=-350;
+				shot2to3.position.y=1000;
+				
+				shot3to4 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				shot3to4.scale.x=0.4;
+				shot3to4.scale.y=0.4;
+				shot3to4.scale.z=0.4;
+				shot3to4.position.x=-100;
+				shot3to4.position.z=350;
+				shot3to4.position.y=1000;
+				
+				shot3to5 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				shot3to5.scale.x=0.4;
+				shot3to5.scale.y=0.4;
+				shot3to5.scale.z=0.4;
+				shot3to5.position.x=-100;
+				shot3to5.position.z=350;
+				shot3to5.position.y=1000;
+				
+				shot3to2 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				shot3to2.scale.x=0.4;
+				shot3to2.scale.y=0.4;
+				shot3to2.scale.z=0.4;
+				shot3to2.position.x=-180;
+				shot3to2.position.z=-390;
+				shot3to2.position.y=1000;
+				
+				
+				shot4to5 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				shot4to5.scale.x=0.4;
+				shot4to5.scale.y=0.4;
+				shot4to5.scale.z=0.4;
+				shot4to5.position.x=410;
+				shot4to5.position.z=-110;
+				shot4to5.position.y=1000;
+				
+				shot5to3 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				shot5to3.scale.x=0.4;
+				shot5to3.scale.y=0.4;
+				shot5to3.scale.z=0.4;
+				shot5to3.position.x=-100;
+				shot5to3.position.z=350;
+				shot5to3.position.y=1000;
+				
+				shot5to4 = new THREE.Mesh( btnAvance, materialAvance );
+				
+				shot5to4.scale.x=0.4;
+				shot5to4.scale.y=0.4;
+				shot5to4.scale.z=0.4;
+				shot5to4.position.x=-410;
+				shot5to4.position.z=50;
+				shot5to4.position.y=1000;
+			
+				var geometry2 = new THREE.PlaneGeometry( 56, 30,4,4 );
+				
+				
+				materialShot2 = new THREE.MeshBasicMaterial( { color: 0xffff00, side: THREE.DoubleSide} );
+		
+				
+				materialLoading = new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'img/loadingShot.jpg' ), color: 0xFFFFFF, side: THREE.DoubleSide
+				} );
+				
+				var geometryLoading = new THREE.PlaneGeometry( 112, 30,4,4 );
+				
+				planeLoading = new THREE.Mesh( geometryLoading, materialLoading );
+				planeLoading.position.x=-25;
+				planeLoading.position.z=56;
+				planeLoading.position.y=-1000;
+				planeLoading.rotateY(  Math.PI / 2 );
+				
+				scene.add( planeLoading );
+				scene.add( imagen360 );
+				
+				scene.add( info01 );
+				
+				scene.add( shot2 );
+				scene.add( objShot2);
+			
+				//scene.add( zona01Text);
+				
+				scene.add( info01Text);
+		
+				objShot2.push(shot2);
+				
+				objInfo01.push(info01);
+
+			
+				if ( Detector.webgl )
+		renderer = new THREE.WebGLRenderer( {antialias:true} );
+	else
+		renderer = new THREE.CanvasRenderer(); 
+				//renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+			
+				zona360.style.cursor = "url('img/cursor360.cur'), auto";
+				
+				document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+				document.addEventListener( 'mousewheel', onDocumentMouseWheel, false );
+				document.addEventListener( 'MozMousePixelScroll', onDocumentMouseWheel, false);
+				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+				document.addEventListener( 'touchend', onDocumentTouchEnd, false );
+				//
+				
+				zona360.addEventListener("mouseover",in360,false);
+				zona360.addEventListener("mouseout",out360,false);
+				
+				btnArriba = document.getElementById( 'btnArriba' );
+				
+				btnArriba.addEventListener("mousedown",goArriba);
+				
+				
+				btnAbajo = document.getElementById( 'btnAbajo' );
+				
+				btnAbajo.addEventListener("mousedown",goAbajo);
+				
+				btnDerecha = document.getElementById( 'btnDerecha' );
+				
+				btnDerecha.addEventListener("mousedown",goDerecha);
+				
+				btnIzquierda = document.getElementById( 'btnIzquierda' );
+				
+				btnIzquierda.addEventListener("mousedown",goIzquierda);
+				
+				btnInstrucciones.addEventListener("mousedown",goInstrucciones);
+				
+				btnCerrar.addEventListener("mousedown",closeInstrucciones);
+				
+				
+				btnSound.addEventListener("mousedown",clicSound);
+				
+				infoClic.addEventListener("mousedown",start360);
+				
+				startImage.style.width=zona360.style.width;
+				startImage.style.height=zona360.style.height;
+
+				
+				THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
+				
+				textLoadAll.innerHTML=((loaded*100)/total).toFixed(0)+"%";
+				
+				if (loaded == total){
+		
+					loadAll.style.visibility="hidden";	
+				
+					}
+				}
+
+				
+				function showText(e){
+				
+					infoInstrucciones.style.visibility="visible";
+				
+				}
+				
+				function quitText(e){
+				
+					infoInstrucciones.style.visibility="hidden";
+				
+				}
+				
+				function clicSound(e){
+				
+					if (stateSound%2==0){
+					
+						imgSound.src="img/btnSoundOn.png";
+						sound.play();
+					
+					}
+					
+					if (stateSound%2==1){
+					
+						imgSound.src="img/btnSoundOff.png";
+						sound.pause();
+					
+					}
+				stateSound++;
+				}
+				
+				function goArriba(e){
+				
+					lat = lat + 2;
+				
+				}
+				
+				function goAbajo(e){
+				
+					lat = lat - 2;
+				
+				}
+				
+				function goDerecha(e){
+				
+					lon = lon + 2;
+					
+					if(lon>360){
+				
+					lon=1;
+				
+				}
+				
+				if (lon<0){
+				
+				
+					lon=359;
+				
+				}
+				
+				}
+				
+				function goIzquierda(e){
+				
+					lon = lon - 2;
+				
+					if(lon>360){
+				
+					lon=1;
+				
+					}
+				
+					if (lon<0){
+				
+				
+						lon=359;
+				
+					}
+				
+				}
+				
+				document.getElementById('sound').addEventListener('ended',again,false);
+				
+				function again(e){
+				
+					sound.play();
+				
+				}
+				
+		
+					
+				document.addEventListener( 'dragover', function ( event ) {
+
+					event.preventDefault();
+					event.dataTransfer.dropEffect = 'copy';
+
+				}, false );
+
+				document.addEventListener( 'dragenter', function ( event ) {
+
+					document.body.style.opacity = 0.5;
+
+				}, false );
+
+				document.addEventListener( 'dragleave', function ( event ) {
+
+					document.body.style.opacity = 1;
+
+				}, false );
+
+				document.addEventListener( 'drop', function ( event ) {
+
+					event.preventDefault();
+
+					var reader = new FileReader();
+					reader.addEventListener( 'load', function ( event ) {
+
+						material.map.image.src = event.target.result;
+						material.map.needsUpdate = true;
+
+					}, false );
+					reader.readAsDataURL( event.dataTransfer.files[ 0 ] );
+
+					document.body.style.opacity = 1;
+
+				}, false );
+
+				//
+				
+				window.addEventListener( 'resize', onWindowResize, false );
+				projectorOver = new THREE.Projector();
+			}
+			
+			
+			function onWindowResize() {
+
+				camera.aspect = (window.innerWidth/window.innerHeight);
+				camera.updateProjectionMatrix();
+				
+				updateWindow();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function putInfoShot1(){
+				
+				lon=150;
+				
+				zona02Text.position.x=-290;
+				zona02Text.position.z=-330;
+				zona02Text.rotation.y=0.5;
+				
+				zona03Text.position.x=-420;
+				zona03Text.position.z=-125;
+				zona03Text.rotation.y=0.75;
+				
+				zona04Text.position.x=-410;
+				zona04Text.position.z=55;
+				zona04Text.rotation.y=1.5;
+				
+				zona05Text.position.x=-400;
+				zona05Text.position.z=155;
+				zona05Text.rotation.y=1.4;
+				
+				shot2.position.y=0;
+				shot3.position.y=22;
+				shot4.position.y=14;
+				shot5.position.y=0;
+				BackShot2.position.y=1000;
+				BackShot3.position.y=1000;
+				BackShot4.position.y=1000;
+				BackShot5.position.y=1000;
+				
+				info01.position.x=230;
+				info01.position.z=-195;
+				info01.position.y=10;
+				info01.rotation.y=2.0;
+					
+				info11.position.x=200;
+				info11.position.z=130;
+				info11.position.y=0;
+				info11.rotation.y=1;
+
+				info12.position.x=100;
+				info12.position.z=250;
+				info12.position.y=-12;
+				info12.rotation.y=0.5;
+
+				info13.position.x=54;
+				info13.position.z=250;
+				info13.position.y=0;
+				info13.rotation.y=0.55;
+			
+			}
+			
+			
+			function putInfoShot2(){
+				
+				zona03Text.position.x=117;
+				zona03Text.position.z=-320;
+				
+				info03.position.x=-175;
+				info03.position.z=-200;
+				info03.position.y=-10;
+				info03.rotation.y=3.5;
+				
+				
+				info14.position.x=70;
+				info14.position.z=220;
+				info14.position.y=0;
+				info14.rotation.y=3.5;
+			
+			}
+			
+			function putInfoShot3(){
+
+				zona04Text.position.x=35;
+				zona04Text.position.z=350;
+				
+				zona05Text.position.x=350;
+				zona05Text.position.z=143;
+			
+				zona02Text.position.x=155;
+				zona02Text.position.z=-390;
+			
+				info02.position.x=45;
+				info02.position.z=-220;
+				info02.position.y=-25;
+				info02.rotation.y=3;
+
+				info04.position.x=-220;
+				info04.position.z=-185;
+				info04.position.y=0;			
+				info04.rotation.y=0.8;
+						
+				info05.position.x=-250;
+				info05.position.z=73;
+				info05.position.y=20;
+				info05.rotation.y=2;
+							
+			
+			}
+			
+			function putInfoShot4(){
+				
+				info06.position.x=175;
+				info06.position.z=-170;
+				info06.position.y=0;
+				info06.rotation.y=2;
+				
+				
+			
+			}
+			
+			function putInfoShot5(){	
+				
+				zona03Text.position.x=-8;
+				zona03Text.position.z=-345;
+					
+				info07.position.x=-100;
+				info07.position.z=260;
+				info07.position.y=10;
+				info07.rotation.y=2.8;
+					
+				info08.position.x=70;
+				info08.position.z=220;
+				info08.position.y=0;
+				info08.rotation.y=0.2;
+						
+				info09.position.x=252;
+				info09.position.z=115;
+				info09.position.y=10;
+				info09.rotation.y=4;
+			
+			}
+			
+			function hideBtns(){
+			
+				shot2.position.y=1000;
+				shot3.position.y=1000;
+				shot4.position.y=1000;
+				shot5.position.y=1000;
+				BackShot2.position.y=1000;
+				BackShot3.position.y=1000;
+				BackShot4.position.y=1000;
+				BackShot5.position.y=1000;
+				shot2to3.position.y=1000;
+				shot3to4.position.y=1000;
+				shot3to5.position.y=1000;
+				shot3to2.position.y=1000;
+				shot5to3.position.y=1000;
+				shot4to5.position.y=1000;
+				shot5to4.position.y=1000;
+				info01.position.y=1000;
+				info02.position.y=1000;
+				info03.position.y=1000;
+				info04.position.y=1000;
+				info05.position.y=1000;
+				info06.position.y=1000;
+				info07.position.y=1000;
+				info08.position.y=1000;
+				info09.position.y=1000;
+				info11.position.y=1000;
+				info12.position.y=1000;
+				info13.position.y=1000;	
+				info14.position.y=1000;	
+				
+			}
+			
+			function onDocumentMouseDown( event ) {
+
+				event.preventDefault();
+				
+				isUserInteracting = true;
+
+				onPointerDownPointerX = event.clientX;
+				onPointerDownPointerY = event.clientY;
+ 
+				onPointerDownLon = lon;
+				onPointerDownLat = lat;
+				
+				
+				// prueba clic 
+				
+					
+	
+mouse.x = ( ( event.clientX - renderer.domElement.offsetLeft ) / renderer.domElement.clientWidth ) * 2 - 1;
+mouse.y = - ( ( event.clientY - renderer.domElement.offsetTop ) / renderer.domElement.clientHeight ) * 2 + 1;
+	
+    //raycaster.setFromCamera( mouse, camera );
+	
+	
+	
+	// find intersections
+
+	// create a Ray with origin at the mouse position
+	//   and direction into the scene (camera direction)
+	var vector = new THREE.Vector3( mouse.x, mouse.y, 1 );
+	projector.unprojectVector( vector, camera );
+	var ray = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
+
+	// create an array containing all objects in the scene with which the ray intersects
+
+	var btnShot2 = ray.intersectObjects( objShot2 );
+
+		 if(( btnShot2.length > 0 ) &&(state360==true)&&(stateInfo==false)){
+		
+					window.open("index4.html","_self");
+
+				}
+				
+		var btnShot3to2 = ray.intersectObjects( objShot3to2 );
+
+		 if(( btnShot3to2.length > 0 ) &&(state360==true)&&(stateInfo==false)){
+		
+					hideBtns();
+		 
+					BackShot2.position.x=-215;
+					BackShot2.position.z=-355;
+					BackShot2.position.y=-15;
+					zona01Text.rotation.y=0.35;
+					
+					shot2to3.position.x=-15;
+					shot2to3.position.z=-400;
+					shot2to3.position.y=-15;
+					zona03Text.rotation.y=0.1;
+
+					lon =180;
+					lat =0;
+					idPlace=2;
+					putInfoShot2();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go2();
+				}
+				
+	var btnBackShot2 = ray.intersectObjects( objBackShot2 );
+
+		if (( btnBackShot2.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+					hideBtns();
+					lon =180;
+					lat =0;
+					idPlace=1;
+					putInfoShot1();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go1();
+				}
+				
+				
+	var btnShot2to3 = ray.intersectObjects( objShot2to3 );
+
+		if (( btnShot2to3.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+					hideBtns();
+					
+					BackShot3.position.y=-10;
+					zona01Text.rotation.y=5.4;
+					
+					shot3to4.position.x=180;
+					shot3to4.position.z=400;
+					shot3to4.position.y=-15;
+					zona04Text.rotation.y=0.1;
+					
+					shot3to5.position.x=380;
+					shot3to5.position.z=20;
+					shot3to5.position.y=-15;
+					shot3to5.rotation.y=2;
+					zona05Text.rotation.y=4.6;
+					
+					shot3to2.position.x=25;
+					shot3to2.position.z=-380;
+					shot3to2.position.y=-12;
+					shot3to2.rotation.y=0.2;
+					zona02Text.rotation.y=6;
+
+					lon =180;
+					lat =0;
+					idPlace=3;
+					putInfoShot3();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go3();
+				}
+				
+	var btnShot3 = ray.intersectObjects( objShot3 );
+
+		if (( btnShot3.length > 0 )&&(state360==true)&&(stateInfo==false)){
+					
+					hideBtns();
+					
+					BackShot3.position.y=-10;
+					zona01Text.rotation.y=5.4;
+					
+					shot3to4.position.x=180;
+					shot3to4.position.z=400;
+					shot3to4.position.y=-15;
+					zona04Text.rotation.y=0.1;
+					
+					shot3to5.position.x=380;
+					shot3to5.position.z=20;
+					shot3to5.position.y=-15;
+					shot3to5.rotation.y=2;
+					zona05Text.rotation.y=4.6;
+					
+					shot3to2.position.x=25;
+					shot3to2.position.z=-380;
+					shot3to2.position.y=-12;
+					shot3to2.rotation.y=0.2;
+					zona02Text.rotation.y=6;
+					
+					lon =180;
+					lat =0;
+					idPlace=3;
+					putInfoShot3();
+					btnInstrucciones.style.visibility="hidden";
+				    btnSound.style.visibility="hidden";
+				    control.style.visibility="hidden";
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go3();
+
+				}
+				
+	var btnShot5to3 = ray.intersectObjects( objShot5to3 );
+
+		if (( btnShot5to3.length > 0 )&&(state360==true)&&(stateInfo==false)){
+					
+					hideBtns();
+					
+					BackShot3.position.y=-10;
+					zona01Text.rotation.y=5.4;
+					
+					shot3to4.position.x=180;
+					shot3to4.position.z=400;
+					shot3to4.position.y=-15;
+					zona04Text.rotation.y=0.1;
+					
+					shot3to5.position.x=380;
+					shot3to5.position.z=20;
+					shot3to5.position.y=-15;
+					shot3to5.rotation.y=2;
+					zona05Text.rotation.y=4.6;
+					
+					shot3to2.position.x=25;
+					shot3to2.position.z=-380;
+					shot3to2.position.y=-12;
+					shot3to2.rotation.y=0.2;
+					zona02Text.rotation.y=6;
+		
+					lon =180;
+					lat =0;
+					idPlace=3;
+					putInfoShot3();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go3();
+				}	
+				
+	var btnBackShot3 = ray.intersectObjects( objBackShot3 );
+
+	if ( (btnBackShot3.length > 0 )&&(state360==true)&&(stateInfo==false)){
+					hideBtns();
+					lon =180;
+					lat =0;
+					idPlace=1;
+					putInfoShot1();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go1();
+				}	
+				
+	var btnShot4 = ray.intersectObjects( objShot4 );
+
+		if ( (btnShot4.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+					hideBtns();
+					BackShot4.position.y=-5;
+					zona01Text.rotation.y=6;
+					zona05Text.rotation.y=4.6;
+					shot4to5.position.y=-8;
+					shot4to5.rotation.y=1.5;
+					lon =180;
+					lat =0;
+					idPlace=4;
+					putInfoShot4();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go4();
+				}
+				
+	var btnShot3to4 = ray.intersectObjects( objShot3to4 );
+
+		if ( (btnShot3to4.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+					hideBtns();
+					BackShot4.position.y=-5;
+					zona01Text.rotation.y=6;
+					shot4to5.position.y=-8;
+					shot4to5.rotation.y=1.5;
+					lon =180;
+					lat =0;
+					idPlace=4;
+					putInfoShot4();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go4();
+				}
+				
+	var btnBackShot4 = ray.intersectObjects( objBackShot4 );
+
+		if (( btnBackShot4.length > 0 ) &&(state360==true)&&(stateInfo==false)){
+					hideBtns();
+					lon =180;
+					lat =0;
+					idPlace=1;
+					putInfoShot1();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go1();
+				}
+	var btnShot4to5 = ray.intersectObjects( objShot4to5 );
+
+		if (( btnShot4to5.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+
+					hideBtns();
+		
+					shot5to3.position.x=-160;
+					shot5to3.position.z=-380;
+					shot5to3.position.y=0;
+					shot5to3.rotation.y=0.2;
+					shot5to4.position.y=0;
+					shot5to4.rotation.y=2;
+					zona03Text.rotation.y=0.2;
+					zona04Text.rotation.y=1.8;
+					
+					BackShot5.position.y=10;
+					zona01Text.rotation.y=5.2;
+
+					lon =180;
+					lat =0;
+					idPlace=5;
+					putInfoShot5();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go5();
+				}
+
+	var btnShot5 = ray.intersectObjects( objShot5 );
+
+		if (( btnShot5.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+
+					hideBtns();
+		
+					shot5to3.position.x=-160;
+					shot5to3.position.z=-380;
+					shot5to3.position.y=0;
+					shot5to3.rotation.y=0.2;
+					shot5to4.position.y=0;
+					shot5to4.rotation.y=2;
+					zona03Text.rotation.y=0.2;
+					zona04Text.rotation.y=1.8;
+					
+					BackShot5.position.y=10;
+					zona01Text.rotation.y=5.2;
+
+					lon =180;
+					lat =0;
+					idPlace=5;
+					putInfoShot5();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go5();
+				}
+
+	var btnShot3to5 = ray.intersectObjects( objShot3to5 );
+
+		if (( btnShot3to5.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+
+					hideBtns();
+		
+					shot5to3.position.x=-160;
+					shot5to3.position.z=-380;
+					shot5to3.position.y=0;
+					shot5to3.rotation.y=0.2;
+					zona03Text.rotation.y=0.2;
+					shot5to4.position.y=0;
+					shot5to4.rotation.y=2;
+					zona04Text.rotation.y=1.8;
+					
+					BackShot5.position.y=10;
+					zona01Text.rotation.y=5.2;
+					lon =180;
+					lat =0;
+					idPlace=5;
+					putInfoShot5();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go5();
+				}
+
+	var btnShot5to4 = ray.intersectObjects( objShot5to4 );
+
+		if ( (btnShot5to4.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+					hideBtns();
+					BackShot4.position.y=-5;
+					zona01Text.rotation.y=6;
+					zona05Text.rotation.y=4.6;
+					shot4to5.position.y=-8;
+					shot4to5.rotation.y=1.5;
+					lon =180;
+					lat =0;
+					idPlace=4;
+					putInfoShot4();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go4();
+				}				
+				
+	var btnBackShot5 = ray.intersectObjects( objBackShot5 );
+
+		if ( (btnBackShot5.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+					hideBtns();
+					lon =180;
+					lat =0;
+					idPlace=1;
+					putInfoShot1();
+					camera.fov = 75.0;
+					camera.updateProjectionMatrix();
+					a=0;
+					cargando.style.visibility="visible";
+					go1();
+				}
+	
+	var btnInfo04 = ray.intersectObjects( objInfo04 );
+
+		if ( (btnInfo04.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+				imgInfo.src="img/info04.png";
+				info.style.visibility="visible";
+				btnCerrar.style.visibility="visible";
+				btnInstrucciones.style.visibility="hidden";
+				control.style.visibility="hidden";
+				btnSound.style.visibility="hidden";
+				stateInfo=true;
+				}
+	
+	var btnInfo05 = ray.intersectObjects( objInfo05 );
+
+		if ( (btnInfo05.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+				imgInfo.src="img/info05.png";
+				info.style.visibility="visible";
+				btnCerrar.style.visibility="visible";
+				btnInstrucciones.style.visibility="hidden";
+				control.style.visibility="hidden";
+				btnSound.style.visibility="hidden";
+				stateInfo=true;
+				}
+				
+	var btnInfo07 = ray.intersectObjects( objInfo07 );
+
+		if ( (btnInfo07.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+				imgInfo.src="img/info07.png";
+				info.style.visibility="visible";
+				btnCerrar.style.visibility="visible";
+				btnInstrucciones.style.visibility="hidden";
+				control.style.visibility="hidden";
+				btnSound.style.visibility="hidden";
+				stateInfo=true;
+				}
+				
+				
+	var btnInfo11 = ray.intersectObjects( objInfo11 );
+
+		if ( (btnInfo11.length > 0 ) &&(state360==true)&&(stateInfo==false)) {
+				imgInfo.src="img/info11.png";
+				info.style.visibility="visible";
+				btnCerrar.style.visibility="visible";
+				btnInstrucciones.style.visibility="hidden";
+				control.style.visibility="hidden";
+				btnSound.style.visibility="hidden";
+				stateInfo=true;
+				}
+}
+
+	function go1(){
+				
+				imagen360.material.map=THREE.ImageUtils.loadTexture( 'img/01.jpg' );
+				THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
+						cargando.style.visibility="hidden";
+						isUserInteracting = false;
+						btnInstrucciones.style.visibility="visible";
+						btnSound.style.visibility="visible";
+						control.style.visibility="visible";
+};
+				
+				
+				}
+
+	function go2(){
+				
+				imagen360.material.map=THREE.ImageUtils.loadTexture( 'img/02.jpg' );
+				THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
+						cargando.style.visibility="hidden";
+						isUserInteracting = false;
+						btnInstrucciones.style.visibility="visible";
+						btnSound.style.visibility="visible";
+						control.style.visibility="visible";
+};
+				
+				
+				}
+				
+	function go3(){
+				
+				imagen360.material.map=THREE.ImageUtils.loadTexture( 'img/03.jpg' );
+				THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
+						cargando.style.visibility="hidden";
+						isUserInteracting = false;
+						btnInstrucciones.style.visibility="visible";
+						btnSound.style.visibility="visible";
+						control.style.visibility="visible";
+};
+				
+				
+				}
+				
+	function go4(){
+				
+				imagen360.material.map=THREE.ImageUtils.loadTexture( 'img/04.jpg' );
+				THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
+						cargando.style.visibility="hidden";
+						isUserInteracting = false;
+						btnInstrucciones.style.visibility="visible";
+						btnSound.style.visibility="visible";
+						control.style.visibility="visible";
+};
+				
+				
+				}
+				
+	function go5(){
+				
+				imagen360.material.map=THREE.ImageUtils.loadTexture( 'img/05.jpg' );
+				THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
+						cargando.style.visibility="hidden";
+						isUserInteracting = false;
+						btnInstrucciones.style.visibility="visible";
+						btnSound.style.visibility="visible";
+						control.style.visibility="visible";
+};
+				
+				
+				}
+
+			function onDocumentMouseMove( event ) {
+			
+				if ( isUserInteracting === true ){
+
+					lon = ( onPointerDownPointerX - event.clientX ) * 0.1 + onPointerDownLon;
+					lat = ( event.clientY - onPointerDownPointerY ) * 0.1 + onPointerDownLat;
+					
+					if(lon>360){
+					
+						lon=lon-360;
+				
+					}
+				
+					if (lon<0){
+				
+						lon=360+lon;
+				
+					}
+					
+
+				}
+				
+					mouse.x = ( ( event.clientX - renderer.domElement.offsetLeft ) / renderer.domElement.clientWidth ) * 2 - 1;
+mouse.y = - ( ( event.clientY - renderer.domElement.offsetTop ) / renderer.domElement.clientHeight ) * 2 + 1;
+					
+
+			}
+
+			function onDocumentTouchStart( event ) {
+
+			if ( event.touches.length === 1 ) {
+
+					event.preventDefault();
+
+					isUserInteracting = true;
+
+					onPointerDownPointerX = event.touches[0].pageX;
+					onPointerDownPointerY = event.touches[0].pageY;
+
+					onPointerDownLon = lon;
+					onPointerDownLat = lat;
+				}
+				
+				if (event.touches.length == 2) {
+					var dx = event.touches[ 0 ].pageX - event.touches[ 1 ].pageX;
+					var dy = event.touches[ 0 ].pageY - event.touches[ 1 ].pageY;
+					_touchZoomDistanceEnd = _touchZoomDistanceStart = Math.sqrt( dx * dx + dy * dy );
+
+					}
+
+			}
+
+			function onDocumentTouchMove( event ) {
+
+				if ( event.touches.length === 1 ) {
+
+					if ( isUserInteracting === true ) {
+
+					lon = ( onPointerDownPointerX - event.touches[0].pageX ) * 0.1 + onPointerDownLon;
+					lat = ( event.touches[0].pageY - onPointerDownPointerY ) * 0.1 + onPointerDownLat;
+
+				}
+
+				}
+				
+				if (event.touches.length == 2) {
+
+					var dx = event.touches[ 0 ].pageX - event.touches[ 1 ].pageX;
+					var dy = event.touches[ 0 ].pageY - event.touches[ 1 ].pageY;
+					_touchZoomDistanceEnd = Math.sqrt( dx * dx + dy * dy );
+
+					var factor = _touchZoomDistanceStart / _touchZoomDistanceEnd;
+					_touchZoomDistanceStart = _touchZoomDistanceEnd;
+					setZoom(camera.fov * factor);
+
+				}
+
+			}
+			
+			function onDocumentTouchEnd(event){
+			
+				isUserInteracting=false;
+				_touchZoomDistanceStart = _touchZoomDistanceEnd = 0;
+				var x = ( event.touches[ 0 ].pageX + event.touches[ 1 ].pageX ) / 2;
+				var y = ( event.touches[ 0 ].pageY + event.touches[ 1 ].pageY ) / 2;
+			}
+			
+			function setZoom(fov){
+
+				camera.fov = fov;
+
+				if(camera.fov < 30) camera.fov = 30;
+				if(camera.fov > 110) camera.fov = 110;
+
+				camera.updateProjectionMatrix();
+
+}
+			
+			function onDocumentMouseUp( event ) {
+				
+				isUserInteracting = false;
+				
+			}
+
+			function onDocumentMouseWheel( event ) {
+
+				// WebKit
+
+				if ( event.wheelDeltaY ) {
+
+					camera.fov -= event.wheelDeltaY * 0.05;
+
+				// Opera / Explorer 9
+
+				} else if ( event.wheelDelta ) {
+
+					camera.fov -= event.wheelDelta * 0.05;
+				
+				// Firefox
+
+				} else if ( event.detail ) {
+
+					camera.fov += event.detail * 1.0;
+
+				}
+				
+				if (camera.fov < 30.0) {
+					camera.fov = 30.0;
+				}
+
+				if (camera.fov > 110.0) {
+					camera.fov = 110.0;
+				}
+				camera.updateProjectionMatrix();
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				update();
+
+			}
+			
+			function in360(event){
+			
+				state360=true;
+			
+			}
+			
+			function out360(event){
+			
+				state360=false;
+			
+			}
+			
+			function goInstrucciones(event){
+				window.open("http://www.arvirt.com/horizonteVerde/index2.html#main-content-1","_self");
+			}
+			
+			function closeInstrucciones(event){
+			
+				imgInfo.src="img/info00.png";
+				info.style.visibility="hidden";
+				btnInstrucciones.style.visibility="visible";
+				btnSound.style.visibility="visible";
+				btnCerrar.style.visibility="hidden";
+				control.style.visibility="visible";
+				stateInfo=false;
+			
+			}
+			
+			function start360(event){
+			
+				info.style.visibility="hidden";
+			    cargando.style.visibility="hidden";
+				control.style.visibility="visible";
+				start.style.visibility="hidden";
+				infoClic.style.visibility="hidden";
+				stateStart=1;
+				stateInfo=false;
+			
+			}
+
+	function update() {
+	
+			infoBotones.style.left=((mouse.x)*(window.innerWidth/2))+(window.innerWidth/2)-90+"px";
+			infoBotones.style.top=(-(mouse.y)*(window.innerHeight/2))+(window.innerHeight/2.3)-30+"px";
+			
+			infoPuntos.style.left=((mouse.x)*(window.innerWidth/2))+(window.innerWidth/2)-90+"px";
+			infoPuntos.style.top=(-(mouse.y)*(window.innerHeight/2))+(window.innerHeight/2.3)-40+"px";
+			
+				if ( isUserInteracting === false ) {
+
+					lon += 0.001;
+
+				}
+
+				lat = Math.max( - 85, Math.min( 85, lat ) );
+				phi = THREE.Math.degToRad( 90 - lat );
+				theta = THREE.Math.degToRad( lon );
+
+				if(lon>360){
+				
+					lon=1;
+				
+				}
+				
+				if (lon<0){
+				
+				
+					lon=359;
+				
+				}
+				
+				camera.target.x = 500 * Math.sin( phi ) * Math.cos( theta );
+				camera.target.y = 500 * Math.cos( phi );
+				camera.target.z = 500 * Math.sin( phi ) * Math.sin( theta );
+
+				camera.lookAt( camera.target );
+
+	
+				/*
+				// distortion
+				camera.position.copy( camera.target ).negate();
+				*/
+	
+	/// Aqui empieza over.
+
+			var vector = new THREE.Vector3( mouse.x, mouse.y, 1 );
+			projectorOver.unprojectVector( vector, camera );
+			var ray = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
+
+			// create an array containing all objects in the scene with which the ray intersects
+			var btnShot2Over = ray.intersectObjects( objShot2 );
+			var btnShot3Over = ray.intersectObjects( objShot3 );
+			var btnShot4Over = ray.intersectObjects( objShot4 );
+			var btnShot5Over = ray.intersectObjects( objShot5 );
+			var btnBackShot2Over = ray.intersectObjects( objBackShot2 );
+			var btnBackShot3Over = ray.intersectObjects( objBackShot3 );
+			var btnBackShot4Over = ray.intersectObjects( objBackShot4 );
+			var btnBackShot5Over = ray.intersectObjects( objBackShot5 );
+			
+			var btnShot2to3Over = ray.intersectObjects( objShot2to3 );
+			var btnShot3to4Over = ray.intersectObjects( objShot3to4 );
+			var btnShot3to5Over = ray.intersectObjects( objShot3to5 );
+			var btnShot3to2Over = ray.intersectObjects( objShot3to2 );
+			var btnShot5to3Over = ray.intersectObjects( objShot5to3 );
+			var btnShot4to5Over = ray.intersectObjects( objShot4to5 );
+			var btnShot5to4Over = ray.intersectObjects( objShot5to4 );
+			
+			var btnInfo01Over = ray.intersectObjects( objInfo01 );
+			var btnInfo02Over = ray.intersectObjects( objInfo02 );
+			var btnInfo03Over = ray.intersectObjects( objInfo03 );
+			var btnInfo04Over = ray.intersectObjects( objInfo04 );
+			var btnInfo05Over = ray.intersectObjects( objInfo05 );
+			var btnInfo06Over = ray.intersectObjects( objInfo06 );
+			var btnInfo07Over = ray.intersectObjects( objInfo07 );
+			var btnInfo08Over = ray.intersectObjects( objInfo08 );
+			var btnInfo09Over = ray.intersectObjects( objInfo09 );
+			var btnInfo11Over = ray.intersectObjects( objInfo11 );
+			var btnInfo12Over = ray.intersectObjects( objInfo12 );
+			var btnInfo13Over = ray.intersectObjects( objInfo13 );
+			var btnInfo14Over = ray.intersectObjects( objInfo14  );
+			// INTERSECTED = the object in the scene currently closest to the camera 
+			//		and intersected by the Ray projected from the mouse position 	
+	
+			// if there is one (or more) intersections
+			
+			if ((( btnShot2Over.length > 0 )||( btnShot3Over.length > 0 )||( btnShot4Over.length > 0 )||( btnShot5Over.length > 0 )||( btnBackShot2Over.length > 0 )||( btnBackShot3Over.length > 0 )||( btnBackShot4Over.length > 0 )||( btnBackShot5Over.length > 0 )||( btnInfo01Over.length > 0 )||( btnInfo02Over.length > 0 )||( btnInfo03Over.length > 0 )||( btnInfo04Over.length > 0 )||( btnInfo05Over.length > 0 )||( btnInfo06Over.length > 0 )||( btnInfo07Over.length > 0 )||( btnInfo08Over.length > 0 )||( btnInfo09Over.length > 0 )||( btnInfo11Over.length > 0 )||( btnInfo12Over.length > 0 )||( btnInfo13Over.length > 0 )||( btnInfo14Over.length > 0 )||( btnShot2to3Over.length > 0 )||( btnShot3to4Over.length > 0 )||( btnShot3to5Over.length > 0 )||( btnShot3to2Over.length > 0 )||( btnShot5to3Over.length > 0 )||( btnShot4to5Over.length > 0 )||( btnShot5to4Over.length > 0 ))&&(stateInfo==false))
+				{
+					zona360.style.cursor = "pointer";
+					
+					
+					if (btnShot2Over.length>0){
+						imgInfoBotones.src="img/habitacion.png";
+						imgInfoBotones.width=200;
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnShot3Over.length>0){
+						imgInfoBotones.src="img/zona03.png";
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnShot4Over.length>0){
+						imgInfoBotones.src="img/zona04.png";
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnShot5Over.length>0){
+						imgInfoBotones.src="img/zona05.png";
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnBackShot2Over.length>0){
+						imgInfoBotones.src="img/zona01.png";
+						infoBotones.style.visibility="visible";
+					}
+					if (btnBackShot3Over.length>0){
+						imgInfoBotones.src="img/zona01.png";
+						infoBotones.style.visibility="visible";
+					}
+					if (btnBackShot4Over.length>0){
+						imgInfoBotones.src="img/zona01.png";
+						infoBotones.style.visibility="visible";
+					}
+					if (btnBackShot5Over.length>0){
+						imgInfoBotones.src="img/zona01.png";
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnShot2to3Over.length>0){
+						imgInfoBotones.src="img/zona03.png";
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnShot3to4Over.length>0){
+						imgInfoBotones.src="img/zona04.png";
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnShot3to5Over.length>0){
+						imgInfoBotones.src="img/zona05.png";
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnShot5to3Over.length>0){
+						imgInfoBotones.src="img/zona03.png";
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnShot3to2Over.length>0){
+						imgInfoBotones.src="img/zona02.png";
+						infoBotones.style.visibility="visible";
+					}
+					
+					if (btnShot4to5Over.length>0){
+						imgInfoBotones.src="img/zona05.png";
+						infoBotones.style.visibility="visible";
+					
+					}
+					
+/////////////////////////////////////////////////////////////////////////////////////////
+					///////// pruebas aquiiii /////////// 
+					
+					if (btnShot5to4Over.length>0){
+						imgInfoBotones.src="img/zona04.png";
+						infoBotones.style.visibility="visible";
+					}
+					////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+					
+					
+					if (btnInfo01Over.length>0){
+						
+						imgInfoPuntos.src="img/cocina.png";
+						imgInfoPuntos.style.width="200px";
+						infoPuntos.style.visibility="visible";
+
+					}
+					
+					if (btnInfo02Over.length>0){
+						
+						imgInfoPuntos.src="img/info02.png";
+						infoPuntos.style.visibility="visible";
+
+					}
+					
+					if (btnInfo03Over.length>0){
+								
+						imgInfoPuntos.src="img/info03.png";
+						imgInfoPuntos.style.width="500px";
+						imgInfoPuntos.style.top="-40px";
+						infoPuntos.style.visibility="visible";
+					}
+					
+					if (btnInfo04Over.length>0){
+					
+						imgInfoPuntos.src="img/infoShowImage.png";
+						infoPuntos.style.visibility="visible";
+					}
+					
+					if (btnInfo05Over.length>0){
+								
+						imgInfoPuntos.src="img/infoShowImage.png";
+						infoPuntos.style.visibility="visible";
+					}
+					
+					if (btnInfo06Over.length>0){
+								
+						imgInfoPuntos.src="img/info06.png";
+						imgInfoPuntos.style.width="500px";
+						imgInfoPuntos.style.top="-40px";
+						infoPuntos.style.visibility="visible";
+
+					}
+					
+					if (btnInfo07Over.length>0){
+								
+						imgInfoPuntos.src="img/infoShowImage.png";
+						infoPuntos.style.visibility="visible";
+					}
+					
+					if (btnInfo08Over.length>0){
+								
+						imgInfoPuntos.src="img/info08.png";
+						infoPuntos.style.visibility="visible";
+					}
+					
+					if (btnInfo09Over.length>0){
+								
+						imgInfoPuntos.src="img/info09.png";
+						infoPuntos.style.visibility="visible";
+					}
+					
+					if (btnInfo11Over.length>0){
+								
+						imgInfoPuntos.src="img/infoShowImage.png";
+						infoPuntos.style.visibility="visible";
+					}
+					
+					if (btnInfo12Over.length>0){
+								
+						imgInfoPuntos.src="img/info12.png";
+						infoPuntos.style.visibility="visible";
+					}
+					
+					if (btnInfo13Over.length>0){
+								
+						imgInfoPuntos.src="img/info13.png";
+						infoPuntos.style.visibility="visible";
+					}
+					
+					if (btnInfo14Over.length>0){
+								
+						imgInfoPuntos.src="img/info14.png";
+						infoPuntos.style.visibility="visible";
+					}
+				}
+			
+			else{
+			
+				if (stateInfo==false){
+					zona360.style.cursor = "url('img/cursor360.cur'), auto";}
+				if (stateInfo==true) {
+				
+					zona360.style.cursor = "default";
+				
+				}
+				zona02Text.position.y=1000;
+				zona03Text.position.y=1000;
+				zona04Text.position.y=1000;
+				zona05Text.position.y=1000;
+				zona01Text.position.y=1000;
+				info01Text.position.y=1000;
+				info02Text.position.y=1000;
+				info03Text.position.y=1000;
+				info06Text.position.y=1000;
+				info08Text.position.y=1000;
+				info09Text.position.y=1000;
+				infoShowText.position.y=1000;					
+				info12Text.position.y=1000;
+				info13Text.position.y=1000;
+				info14Text.position.y=1000;
+				infoBotones.style.visibility="hidden";
+				infoPuntos.style.visibility="hidden";
+				imgInfoPuntos.style.top="0px";
+				imgInfoPuntos.style.width="350px";
+			}
+
+			// 
+			///// aqui termina 
+			
+	}
+
+	
+	function animate() 
+	{
+		requestAnimationFrame( animate );
+		render();		
+		update();
+	}
+	
+	function render(){
+		
+		renderer.render( scene, camera );
+	
+	}
+		</script>		
+		
+		<script>
+		
+			var contenedor = document.getElementById( 'contenedor' );
+			updateWindow();
+			
+			function updateWindow(){
+				zona360.style.left=0+"px";
+				zona360.style.top=0+"px";
+				zona360.style.width=window.innerWidth+"px";
+				zona360.style.height=window.innerHeight+"px";
+				
+				startImage.style.width=zona360.style.width;
+				startImage.style.height=zona360.style.height;
+				
+				load360Image.style.width=zona360.style.width;
+				load360Image.style.height=zona360.style.height;
+				
+				loadAllImage.style.width=zona360.style.width;
+				loadAllImage.style.height=zona360.style.height;
+				
+				imgInfo.style.width=(window.innerWidth*65)/100+"px";
+				imgInfo.style.height="auto";
+				
+				if (stateStart==0){
+					
+					loadAll.style.visibility="visible";
+					start.style.visibility="visible";
+					infoClic.style.visibility="visible";
+					btnInstrucciones.style.visibility="visible";
+					btnSound.style.visibility="visible";
+					
+					}
+			}
+			
+		</script>
+	</body>
+</html>
