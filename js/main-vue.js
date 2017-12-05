@@ -6,7 +6,7 @@ let data = {
 }
 
 
-Vue.use(VueMaterial.default);
+Vue.use(VueMaterial)
 
 var app = new Vue({
 	el: '#app',
@@ -22,6 +22,7 @@ var app = new Vue({
 		slideinteriores : 0,
 		slideambientadas : 0,
 		puntoRecorridos: [],
+		selectedTab : 0,
 	},
 	methods: {
 		changeView: function(){

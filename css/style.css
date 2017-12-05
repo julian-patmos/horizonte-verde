@@ -293,7 +293,7 @@ body{
   .info-apartment{}
 
   .info-apartment .title-small{
-    font-size: 1.3em;
+    font-size: 1em;
     margin-bottom: 10px;
   }
 
@@ -302,7 +302,7 @@ body{
   }
 
   .info-apartment h2{
-    font-size: 2em;
+    font-size: 1.15em;
   }
 
   #plantas-tab{

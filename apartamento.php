@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap@next/dist/css/bootstrap.min.css"/>
 		<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
+	    <link rel="stylesheet" href="https://unpkg.com/vue-material@0.8.1/dist/vue-material.css">
 	    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
 		<link rel="stylesheet" href="css/style.css"> 
 		<link rel="stylesheet" href="css/iphone-responsive.css">
@@ -43,7 +44,7 @@
 						</div>
 					</div>
 				</header>
-				<md-tabs md-alignment="centered">
+				<md-tabs md-alignment="centered" md-selected="selectedTab" md-centered class="md-transparent">
 					<md-tab id="informacion-tab" md-label="INFORMACIÓN">
 						<div class="md-alignment-top-center md-layout">
 							<div class="md-layout-item md-xsmall-size-100 md-size-30">
@@ -63,7 +64,7 @@
 							<div class="md-layout-item md-xsmall-size-100 md-size-30">
 								<img class="img-recorridos img-responsive" :src="info.img_apart" />
 								<a v-for="(recorrido, index) in puntoRecorridos" :href="recorrido.link" :key="index">
-									<div style="background-size: 100% 100%; position: relative;width: 22%; height: 18vh;" :style="{backgroundImage: `url(images/verRecorrido.png)`, top : recorrido.top, left : recorrido.left}"></div>
+									<div style="background-size: 100% 100%; position: relative;width: 22%; height: 12vh;" :style="{backgroundImage: `url(images/verRecorrido.png)`, top : recorrido.top, left : recorrido.left}"></div>
 								</a>
 							</div>
 							<div class="md-layout-item md-xsmall-size-100 md-size-20">
@@ -111,7 +112,7 @@
 			</section>
 		</div>
 		<script type="text/javascript" src="https://unpkg.com/vue@2.5.8/dist/vue.js"></script>
-		<script type="text/javascript" src="https://unpkg.com/vue-material@beta"></script>
+		<script type="text/javascript" src="https://unpkg.com/vue-material@0.8.1/dist/vue-material.js"></script>
 		<script src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
 		<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
 		<script type="text/javascript" src="js/main-vue.js"></script>
