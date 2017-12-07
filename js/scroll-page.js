@@ -11,5 +11,4 @@
 		imagenTorreApartamentoContainer.classList.toggle("move-right")
 	});
 
-
 })();
