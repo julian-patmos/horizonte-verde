@@ -2,11 +2,13 @@
 <html>
 <head>
 	<title>Horizonte Verde | Movil</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body style="background: #27baab">
 	<div id="mainindex">
 		<div class="contenedor" id="primera-seccion" v-show="showprimero">
 			<div class="logo"></div>
@@ -23,9 +25,18 @@
 			</div>
 		</div>
 		<div class="contenedor" id="segunda-seccion" v-show="showsegundo">
-			<div class="volver-casa"></div>
-			<div class="titulo"></div>
-			<div class="apartamentos"></div>
+			<div class="volver-casa">
+				<a href="#" v-on:click="changeView"><i class="fa fa-home" aria-hidden="true"></i></a>
+			</div>
+			<div class="titulo">
+				<h2>TIPOS DE APARTAMENTOS HORIZONTE VERDE</h2>
+			</div>
+			<div class="apartamentos">
+				<div v-for="apartamento in apartamentos" class="link-container">
+					<p v-html="apartamento.infogeneral"></p>
+					<a :href="`/horizonteVerde/apartamento.php?id=${apartamento.type_fk}&torre=1`">Ver mas</a>
+				</div>
+			</div>
 		</div>
 	</div>
 

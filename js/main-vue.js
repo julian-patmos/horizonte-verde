@@ -44,7 +44,7 @@ var app = new Vue({
 			.then( 
 				data => {
 					this.apartamento = data
-					this.getInfoApart(data[0].type)
+					this.getInfoApart(data[0].type_fk)
 			})
 			.catch(function(error) {
 				console.log(error);

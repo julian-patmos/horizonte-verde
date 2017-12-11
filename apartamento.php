@@ -17,7 +17,6 @@
 		<link rel="stylesheet" href="css/style.css"> 
 		<link rel="stylesheet" href="css/iphone-responsive.css">
 
-
 	</head>
 
 	<body>

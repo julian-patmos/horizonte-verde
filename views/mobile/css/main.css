@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	font-family: 'Dosis', sans-serif;
 }
 
 .contenedor{
@@ -35,7 +36,7 @@ body{
 
 #primera-seccion .redes-sociales{
 	background-color: #fff;
-	width: 170px;
+	width: 250px;
 	display: flex;
 	flex-flow: nowrap row;
 	margin : 0 auto;
@@ -46,4 +47,30 @@ body{
 #primera-seccion .redes-sociales img{
 	width: 25%;
 	margin : 0 5px;
+}
+
+.volver-casa a{
+	font-size: 2em;
+	color: #fefefe;
+}
+
+.titulo h2{
+	text-align: center;
+	color: #fefefe;
+}
+
+
+.apartamentos .link-container{
+	background: #fefefe;
+	margin : 0;
+	margin-bottom: 15px;
+	padding: 10px 20px;
+}
+
+.apartamentos .link-container a{
+	color: #fefefe;
+	text-decoration: none;
+	background: #8e8e8e;
+	padding: 5px 10px;
+	margin-bottom: auto;
 }
