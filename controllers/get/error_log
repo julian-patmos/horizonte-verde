@@ -1,0 +1,190 @@
+[21-Nov-2017 04:46:34 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[21-Nov-2017 04:46:34 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[21-Nov-2017 04:46:34 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 04:47:22 Etc/GMT] PHP Warning:  mysqli::mysqli(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (2) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[21-Nov-2017 04:47:22 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[21-Nov-2017 04:47:22 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 04:47:33 Etc/GMT] PHP Warning:  mysqli::mysqli(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (2) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[21-Nov-2017 04:47:33 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[21-Nov-2017 04:47:33 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 04:47:40 Etc/GMT] PHP Warning:  mysqli::mysqli(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (2) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[21-Nov-2017 04:47:40 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[21-Nov-2017 04:47:40 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 04:47:59 Etc/GMT] PHP Warning:  mysqli::mysqli(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (2) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[21-Nov-2017 04:47:59 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[21-Nov-2017 04:47:59 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 12:05:47 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 12:35:07 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 13:11:07 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 13:11:47 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 13:13:19 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 14:14:36 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 20:44:46 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 22:28:15 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 22:28:53 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[21-Nov-2017 22:31:28 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 00:17:22 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 05:15:19 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 13:37:16 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 13:38:10 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 13:38:57 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 16:38:47 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 16:38:55 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 19:22:19 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 19:32:00 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 19:35:40 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 19:39:05 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 19:39:33 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 19:44:48 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 19:46:22 Etc/GMT] PHP Warning:  require(../../../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:46:22 Etc/GMT] PHP Warning:  require(../../../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:46:22 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../../../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:48:43 Etc/GMT] PHP Warning:  require(../../../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:48:43 Etc/GMT] PHP Warning:  require(../../../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:48:43 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../../../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:50:51 Etc/GMT] PHP Warning:  require(../../../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:50:51 Etc/GMT] PHP Warning:  require(../../../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:50:51 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../../../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:51:11 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[22-Nov-2017 19:51:39 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:51:39 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:51:39 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:52:10 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:52:10 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 19:52:10 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:02:27 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:02:27 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:02:27 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:04:58 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:04:58 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:04:58 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:06:27 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:06:27 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:06:27 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:06:34 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:06:34 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:06:34 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:10:52 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:10:52 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:10:52 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:12:15 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:12:15 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:12:15 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:13:36 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:13:36 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:13:36 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:15:22 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:15:22 Etc/GMT] PHP Warning:  require(../models/ApartamentosModel.php): failed to open stream: No such file or directory in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[22-Nov-2017 20:15:22 Etc/GMT] PHP Fatal error:  require(): Failed opening required '../models/ApartamentosModel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/arvir49/public_html/horizonteVerde/controllers/get/getApartamentos.php on line 2
+[23-Nov-2017 03:44:43 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 03:44:43 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 03:44:43 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 03:45:03 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 03:45:03 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 03:45:03 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 03:46:25 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 03:46:25 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 03:46:25 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 03:47:08 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 03:47:08 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 03:47:08 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 03:47:43 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 03:47:43 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 03:47:43 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 03:48:31 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 03:48:31 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 03:48:31 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 03:50:27 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 03:50:27 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 03:50:27 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 03:53:33 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 03:53:33 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 03:53:33 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 04:04:50 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 04:04:50 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 04:04:50 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 04:08:28 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 04:08:28 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 04:08:28 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 18:37:10 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 18:37:10 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 18:37:10 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 19:18:00 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 19:18:00 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 19:18:00 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 19:34:33 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 19:34:33 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 19:34:33 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[23-Nov-2017 19:44:30 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[23-Nov-2017 19:44:30 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[23-Nov-2017 19:44:30 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[24-Nov-2017 19:48:03 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[24-Nov-2017 19:48:03 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[24-Nov-2017 19:48:03 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[24-Nov-2017 19:48:05 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[24-Nov-2017 19:48:05 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[24-Nov-2017 19:48:05 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[25-Nov-2017 16:45:07 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[25-Nov-2017 16:45:07 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[25-Nov-2017 16:45:07 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[27-Nov-2017 04:26:47 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[27-Nov-2017 04:26:47 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 24
+[27-Nov-2017 04:26:47 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 27
+[01-Dec-2017 05:08:51 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[01-Dec-2017 05:08:51 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 23
+[01-Dec-2017 05:08:51 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 26
+[01-Dec-2017 05:09:08 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 10
+[01-Dec-2017 05:09:08 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 23
+[01-Dec-2017 05:09:08 Etc/GMT] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/arvir49/public_html/horizonteVerde/models/conn.php on line 26
+[01-Dec-2017 05:12:48 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:12:48 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:13:09 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:13:09 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:14:00 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:14:00 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:15:34 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:15:34 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:16:14 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:16:14 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:17:13 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[01-Dec-2017 05:17:13 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[02-Dec-2017 04:34:26 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[02-Dec-2017 04:34:26 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[02-Dec-2017 04:48:40 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[02-Dec-2017 04:48:40 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[04-Dec-2017 15:44:52 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[04-Dec-2017 15:44:52 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[04-Dec-2017 15:46:53 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[04-Dec-2017 15:46:53 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:39:34 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:39:34 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:40:35 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:40:35 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:42:50 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:42:50 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:44:51 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:44:51 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:45:20 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 03:45:20 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 13:33:32 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 13:33:32 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 13:34:37 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 13:34:37 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 13:34:55 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 13:34:55 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 17:26:00 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 17:26:00 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 17:26:17 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[06-Dec-2017 17:26:17 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 16:23:57 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 16:23:57 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 16:24:13 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 16:24:13 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 16:24:50 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 16:24:50 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 19:28:46 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 19:28:46 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 19:29:06 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 19:29:06 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 19:31:50 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
+[07-Dec-2017 19:31:50 Etc/GMT] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/arvir49/public_html/horizonteVerde/controllers/get/getInfoApartamentos.php on line 9
