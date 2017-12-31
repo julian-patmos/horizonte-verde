@@ -36,15 +36,12 @@ var app = new Vue({
 			formData.append('id', params.get("id"));
 			formData.append('torre', params.get("torre"));
 			fetch('controllers/get/getApartamentos.php', { method: 'POST', body: formData })
-			.then(
-				response => {
-					return response.json()
-				}
-			)
+			.then(response => response.json())
 			.then( 
 				data => {
 					this.apartamento = data
-					this.getInfoApart(data[0].type_fk)
+					idApartamento = params.get("id")
+					this.getInfoApart(data[(idApartamento - 1)].type_fk)
 			})
 			.catch(function(error) {
 				console.log(error);
@@ -54,11 +51,7 @@ var app = new Vue({
 			let formData = new FormData();
 			formData.append('tipo', type);
 			fetch('controllers/get/getInfoApartamentos.php', { method: 'POST', body: formData })
-			.then(
-				response => {
-					return response.json()
-				}
-			)
+			.then(response => response.json())
 			.then(
 				data => {
 					this.info = data;
