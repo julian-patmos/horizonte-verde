@@ -279,6 +279,18 @@ body{
 
 }
 
+.md-theme-default.md-tabs.md-transparent>.md-tabs-navigation .md-tab-header.md-active, .md-theme-default.md-tabs.md-transparent>.md-tabs-navigation .md-tab-header:focus{
+  color: #3dbbab !important;
+}
+
+.md-theme-default.md-tabs.md-transparent>.md-tabs-navigation .md-tab-indicator{
+  background-color: #3dbbab !important;
+}
+
+.md-tabs .md-tab-header-navigation-button{
+  display: none;
+}
+
 
 @media (max-width: 575px) {
 
@@ -319,7 +331,11 @@ body{
   }
 }
 
-@media (min-width: 768px) {  }
+@media (min-width: 768px) { 
+  .md-tab-header{
+    width: 100%;
+  }
+}
 
 @media (min-width: 992px) {  }
 

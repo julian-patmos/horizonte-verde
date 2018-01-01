@@ -227,7 +227,7 @@
 	</head>
 	<body>
 	
-		<a href="/horizonteVerde" class="close-ico"><i class="fa fa-times" aria-hidden="true"></i></a>
+		<a href="javascript:void();" class="close-ico" onclick="goBack(event)"><i class="fa fa-times" aria-hidden="true"></i></a>
 		<div id="contenedor"></div>
 		<div id="zona360"><div id="control" style="visibility:hidden"><img src="img/control.png" /><div id="btnArriba"></div><div id="btnDerecha"></div><div id="btnAbajo"></div><div id="btnIzquierda"></div></div><div id="btnInstrucciones" style="visibility:hidden"><img width="155" height="36" src="img/cerrarTour.png"/></div><div id="btnSound" style="visibility:hidden"><img id="imgSound" src="img/btnSoundOn.png"/></div><div id="info" style="visibility:hidden"><img id="imgInfo" src="img/info00.png"/></div><div id="btnCerrar" style="visibility:hidden"><img src="img/btnCerrar.png"/></div><div id="start" title="Haz clic para ingresar" style="visibility:hidden" alt="Ingresar"><img id="startImage" src="img/start.jpg" /></div><div id="infoClic" style="visibility:hidden"><img id="imgClicAqui" src="img/infoClic.png"/></div><div id="infoInstrucciones" style="visibility:hidden"><img id="imgInfoInstrucciones" src="img/infoInstrucciones.png"/></div><div id="infoBotones" style="visibility:hidden"><img id="imgInfoBotones" src="img/sala.png"/></div><div id="infoPuntos" style="visibility:hidden"><img id="imgInfoPuntos" src="img/bath.png"/></div><div id="cargando" style="visibility:hidden"><img id="load360Image" src="img/load360.png"/></div><div id="loadAll" style="visibility:hidden"><img id="loadAllImage" src="img/load360.png"/><div id="textLoadAll">0%</div></div></div>
 		<script src="three.js"></script>
@@ -2130,6 +2130,11 @@ mouse.y = - ( ( event.clientY - renderer.domElement.offsetTop ) / renderer.domEl
 					btnSound.style.visibility="visible";
 					
 					}
+			}
+
+			function goBack(e){
+				e.preventDefault();
+				window.history.back();
 			}
 			
 		</script>
