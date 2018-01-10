@@ -36,7 +36,6 @@ body{
 
 #primera-seccion .redes-sociales{
 	background-color: #fff;
-	width: 250px;
 	display: flex;
 	flex-flow: nowrap row;
 	margin : 0 auto;
@@ -45,7 +44,8 @@ body{
 }
 
 #primera-seccion .redes-sociales img{
-	width: 25%;
+	width: 45px;
+	height: 45px;
 	margin : 0 5px;
 }
 
