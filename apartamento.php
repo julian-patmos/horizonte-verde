@@ -43,7 +43,7 @@
 						</div>
 					</div>
 				</header>
-				<md-tabs md-alignment="centered" md-centered class="md-transparent">
+				<md-tabs md-centered class="md-transparent">
 					<md-tab id="informacion-tab" md-label="INFORMACIÓN">
 						<div class="md-alignment-top-center md-layout">
 							<div class="md-layout-item md-xsmall-size-100 md-size-30">
