@@ -167,8 +167,23 @@ body{
       font-size: 1.1em;
     }
 
-    .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
-      background-color: #27baab;
+    .md-theme-default.md-tabs>.md-tabs-navigation {
+      background-color: #65ecdf !important;
+    }
+
+    .md-theme-default.md-tabs>.md-tabs-navigation .md-tab-header {
+      color: rgba(6, 6, 6, 0.54) !important;
+      font-size: 0.9em;
+    }
+
+    .md-theme-default.md-tabs>.md-tabs-navigation .md-tab-header.md-active, .md-theme-default.md-tabs>.md-tabs-navigation .md-tab-header:focus {
+      color: rgb(255, 255, 255) !important;
+      font-weight: bold;
+    }
+
+    .md-theme-default.md-tabs>.md-tabs-navigation .md-tab-indicator {
+        background-color: #5156ff !important;
+        height: 4px;
     }
 
 #btn_back{
