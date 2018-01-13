@@ -14,8 +14,8 @@
 		<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
 	    <link rel="stylesheet" href="https://unpkg.com/vue-material@0.8.1/dist/vue-material.css">
 	    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
-		<link rel="stylesheet" href="css/iphone-responsive.css">
 		<link rel="stylesheet" href="css/style.css"> 
+		<link rel="stylesheet" href="css/iphone-responsive.css">
 
 	</head>
 
