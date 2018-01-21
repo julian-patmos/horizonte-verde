@@ -11,7 +11,7 @@ Vue.use(VueMaterial)
 var app = new Vue({
 	el: '#app',
 	data: {
-		apartamento: {},
+		apartamentos: {},
 		info: {},
 		header : {
 			description : "3 ALCOBAS ESQUINERO + VESTIER + CLOSET DE LINOS + BALCÓN",
@@ -23,6 +23,7 @@ var app = new Vue({
 		slideambientadas : 0,
 		puntoRecorridos: [],
 		selectedTab : 0,
+		vistaTorre : 1
 	},
 	methods: {
 		changeView: function(){
@@ -35,13 +36,15 @@ var app = new Vue({
 			let params = (new URL(document.location)).searchParams;
 			formData.append('id', params.get("id"));
 			formData.append('torre', params.get("torre"));
+			this.vistaTorre = params.get("vista")
+			this.header.subtitle = this.vistaTorre == 1 ? "VISTA A LA CORDILLERA" : "VISTA A LA CIUDAD"
 			fetch('controllers/get/getApartamentos.php', { method: 'POST', body: formData })
 			.then(response => response.json())
 			.then( 
 				data => {
-					this.apartamento = data
+					this.apartamentos = data
 					idApartamento = params.get("id")
-					this.getInfoApart(data[(idApartamento - 1)].type_fk)
+					this.getInfoApart(idApartamento)
 			})
 			.catch(function(error) {
 				console.log(error);

@@ -57,7 +57,8 @@
 									</ul>
 								</div>
 								<div class="col-md-12" style="text-align: center; margin-top: 20px;">
-									<img src="images/vistaCordilleraApart.jpg"/>
+									<img v-if="vistaTorre == 1" src="images/vistaCordilleraApart.jpg"/>
+									<img v-if="vistaTorre == 2" src="images/vistaCiudadApart.jpg"/>
 								</div>
 							</div>
 							<div class="md-layout-item md-xsmall-size-100 md-size-30">
@@ -75,7 +76,11 @@
 								
 								<div style="text-align: center; margin-top: 20px;">
 									<div class="available"></div>
-									<div id="list_apart1" style="font-size:160%;"></div>
+									<div id="list_apart1" style="font-size: 0.8em;">
+										<span v-for="(apartamento, index) in apartamentos">
+											<span v-show="index > 0"> - </span>{{apartamento.idApart}} 
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>

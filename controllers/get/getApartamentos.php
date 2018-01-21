@@ -5,7 +5,7 @@
 
 	$newClss = new ApartamentosModel();
 
-	$response = $newClss->get_all_aparts($id, $torre);
+	$response = $newClss->get_apart($id, $torre);
 
 	echo json_encode($response);
 ?>
