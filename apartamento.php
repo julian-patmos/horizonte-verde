@@ -63,7 +63,11 @@
 							</div>
 							<div class="md-layout-item md-xsmall-size-100 md-size-30">
 								<img class="img-recorridos img-responsive" :src="info.img_apart" />
-								<a v-for="(recorrido, index) in puntoRecorridos" :href="recorrido.link" :key="index">
+								<a v-for="(recorrido, index) in puntoRecorridos"
+
+									:href="`${recorrido.link}?id=${infoUrl.tipo}&torre=${infoUrl.torre}&vista=${infoUrl.vista}`"
+									:key="index">
+
 									<div style="background-size: 100% 100%; position: relative;width: 22%; height: 12vh;" :style="{backgroundImage: `url(images/verRecorrido.png)`, top : recorrido.top, left : recorrido.left}"></div>
 								</a>
 							</div>

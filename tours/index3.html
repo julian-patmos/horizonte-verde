@@ -2134,8 +2134,14 @@ mouse.y = - ( ( event.clientY - renderer.domElement.offsetTop ) / renderer.domEl
 			}
 
 			function goBack(e){
+				let params = (new URL(document.location)).searchParams;
+
+				let torre = params.get("torre");
+				let tipo = params.get("id");
+				let vista = params.get("vista");
+
 				e.preventDefault();
-				window.history.back();
+				window.location.href = `?id=${tipo}&torre=${torre}&vista=${vista}`;
 			}
 			
 		</script>

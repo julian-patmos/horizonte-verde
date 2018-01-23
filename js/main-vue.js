@@ -17,6 +17,11 @@ var app = new Vue({
 			description : "3 ALCOBAS ESQUINERO + VESTIER + CLOSET DE LINOS + BALCÓN",
 			subtitle : "VISTA A LA CORDILLERA"
 		},
+		infoUrl : {
+			torre : 1,
+			vista : 1,
+			tipo : 1
+		},
 		showprimero : true,
 		showsegundo : false,
 		slideinteriores : 0,
@@ -33,26 +38,23 @@ var app = new Vue({
 		},
 		getinfo: function () {
 			let formData = new FormData();
-			let params = (new URL(document.location)).searchParams;
-			formData.append('id', params.get("id"));
-			formData.append('torre', params.get("torre"));
-			this.vistaTorre = params.get("vista")
-			this.header.subtitle = this.vistaTorre == 1 ? "VISTA A LA CORDILLERA" : "VISTA A LA CIUDAD"
+			formData.append('id', this.infoUrl.tipo);
+			formData.append('torre', this.infoUrl.torre);
+			this.header.subtitle = this.infoUrl.vista == 1 ? "VISTA A LA CORDILLERA" : "VISTA A LA CIUDAD"
 			fetch('controllers/get/getApartamentos.php', { method: 'POST', body: formData })
 			.then(response => response.json())
 			.then( 
 				data => {
 					this.apartamentos = data
-					idApartamento = params.get("id")
-					this.getInfoApart(idApartamento)
+					this.getInfoApart(this.infoUrl.tipo)
 			})
 			.catch(function(error) {
 				console.log(error);
 			});
 		},
-		getInfoApart : function (type) {
+		getInfoApart : function () {
 			let formData = new FormData();
-			formData.append('tipo', type);
+			formData.append('tipo', this.infoUrl.tipo);
 			fetch('controllers/get/getInfoApartamentos.php', { method: 'POST', body: formData })
 			.then(response => response.json())
 			.then(
@@ -72,5 +74,11 @@ var app = new Vue({
 		this.getinfo()
 
 		document.getElementById("first-section").scrollIntoView();
+
+		let params = (new URL(document.location)).searchParams;
+
+		this.infoUrl.torre = params.get("torre");
+		this.infoUrl.tipo = params.get("id");
+		this.infoUrl.vista = params.get("vista");
 	}
 })
